@@ -1,0 +1,724 @@
+
+> bonapipet-frontend@1.0.0 dev
+> vite
+
+
+  VITE v5.4.21  ready in 327 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+6:30:25 PM [vite] vite.config.js changed, restarting server...
+6:30:25 PM [vite] server restarted.
+1:58:55 AM [vite] vite.config.js changed, restarting server...
+1:58:55 AM [vite] server restarted.
+2:05:11 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SettingsManager.jsx". Does the file exist?
+2:05:11 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SlidesManager.jsx". Does the file exist?
+2:05:11 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SmtpManager.jsx". Does the file exist?
+2:05:11 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/GalleryManager.jsx". Does the file exist?
+2:05:11 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/CorporatePagesManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/CorporatePagesManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function CorporatePagesManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:11 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/CorporatePagesManager.jsx". Does the file exist?
+2:05:11 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/ProductsManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/ProductsManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function ProductsManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:11 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/ProductsManager.jsx". Does the file exist?
+2:05:11 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/NewsManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/NewsManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function NewsManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:11 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/NewsManager.jsx". Does the file exist?
+2:05:11 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/PasswordManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/PasswordManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import { useAuth } from "../../../context/AuthContext";
+  21 |  import styles from "./Manager.module.css";
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:11 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/PasswordManager.jsx". Does the file exist?
+2:05:11 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SettingsManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/SettingsManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function SettingsManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+2:05:11 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SlidesManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/SlidesManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function SlidesManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+2:05:11 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/GalleryManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/GalleryManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function GalleryManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+2:05:11 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SmtpManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/SmtpManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function SmtpManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+2:05:43 AM [vite] hmr update /src/pages/admin/AdminDashboard.jsx
+2:05:43 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SlidesManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/SlidesManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function SlidesManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:43 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SlidesManager.jsx". Does the file exist?
+2:05:43 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/CorporatePagesManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/CorporatePagesManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function CorporatePagesManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:43 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/CorporatePagesManager.jsx". Does the file exist?
+2:05:43 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/NewsManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/NewsManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function NewsManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:43 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/NewsManager.jsx". Does the file exist?
+2:05:43 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/GalleryManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/GalleryManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function GalleryManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:43 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/GalleryManager.jsx". Does the file exist?
+2:05:43 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/ProductsManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/ProductsManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function ProductsManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:43 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/ProductsManager.jsx". Does the file exist?
+2:05:43 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/PasswordManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/PasswordManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import { useAuth } from "../../../context/AuthContext";
+  21 |  import styles from "./Manager.module.css";
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:43 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/PasswordManager.jsx". Does the file exist?
+2:05:43 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SmtpManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/SmtpManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function SmtpManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:43 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SmtpManager.jsx". Does the file exist?
+2:05:45 AM [vite] hmr update /src/pages/admin/AdminDashboard.jsx
+2:05:45 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/CorporatePagesManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/CorporatePagesManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function CorporatePagesManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:45 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/CorporatePagesManager.jsx". Does the file exist?
+2:05:45 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/NewsManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/NewsManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function NewsManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:45 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/NewsManager.jsx". Does the file exist?
+2:05:45 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/PasswordManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/PasswordManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import { useAuth } from "../../../context/AuthContext";
+  21 |  import styles from "./Manager.module.css";
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:45 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/PasswordManager.jsx". Does the file exist?
+2:05:45 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SmtpManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/SmtpManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function SmtpManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:45 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SmtpManager.jsx". Does the file exist?
+2:05:45 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/GalleryManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/GalleryManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function GalleryManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:45 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/GalleryManager.jsx". Does the file exist?
+2:05:45 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/ProductsManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/ProductsManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function ProductsManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:45 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/ProductsManager.jsx". Does the file exist?
+2:05:47 AM [vite] hmr update /src/pages/admin/AdminDashboard.jsx
+2:05:47 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/NewsManager.jsx". Does the file exist?
+2:05:47 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SmtpManager.jsx". Does the file exist?
+2:05:47 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/GalleryManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/GalleryManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function GalleryManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:47 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/GalleryManager.jsx". Does the file exist?
+2:05:47 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/PasswordManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/PasswordManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import { useAuth } from "../../../context/AuthContext";
+  21 |  import styles from "./Manager.module.css";
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:47 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/PasswordManager.jsx". Does the file exist?
+2:05:47 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/ProductsManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/ProductsManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function ProductsManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:47 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/ProductsManager.jsx". Does the file exist?
+2:05:47 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SmtpManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/SmtpManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function SmtpManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+2:05:47 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/NewsManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/NewsManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function NewsManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+2:05:49 AM [vite] hmr update /src/pages/admin/AdminDashboard.jsx
+2:05:49 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/GalleryManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/GalleryManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function GalleryManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:49 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/GalleryManager.jsx". Does the file exist?
+2:05:49 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SmtpManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/SmtpManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function SmtpManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:49 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SmtpManager.jsx". Does the file exist?
+2:05:49 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/NewsManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/NewsManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function NewsManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:49 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/NewsManager.jsx". Does the file exist?
+2:05:49 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/PasswordManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/PasswordManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import { useAuth } from "../../../context/AuthContext";
+  21 |  import styles from "./Manager.module.css";
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:49 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/PasswordManager.jsx". Does the file exist?
+2:05:51 AM [vite] hmr update /src/pages/admin/AdminDashboard.jsx
+2:05:51 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/GalleryManager.jsx". Does the file exist?
+2:05:51 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/PasswordManager.jsx". Does the file exist?
+2:05:51 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SmtpManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/SmtpManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function SmtpManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+2:05:51 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SmtpManager.jsx". Does the file exist?
+2:05:51 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/PasswordManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/PasswordManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import { useAuth } from "../../../context/AuthContext";
+  21 |  import styles from "./Manager.module.css";
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+2:05:51 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/GalleryManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/GalleryManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function GalleryManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+2:05:53 AM [vite] hmr update /src/pages/admin/AdminDashboard.jsx
+2:05:53 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SmtpManager.jsx". Does the file exist?
+2:05:53 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/PasswordManager.jsx". Does the file exist?
+2:05:53 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/PasswordManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/PasswordManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import { useAuth } from "../../../context/AuthContext";
+  21 |  import styles from "./Manager.module.css";
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+2:05:53 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/SmtpManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/SmtpManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState, useEffect } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import styles from "./Manager.module.css";
+  21 |  export default function SmtpManager() {
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+2:05:55 AM [vite] hmr update /src/pages/admin/AdminDashboard.jsx
+2:05:55 AM [vite] Pre-transform error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/PasswordManager.jsx". Does the file exist?
+2:05:55 AM [vite] Internal server error: Failed to resolve import "../../../api/apiClient" from "src/components/admin/PasswordManager.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/orcungulay/Downloads/bonapipet/frontend/src/components/admin/PasswordManager.jsx:2:22
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useState } from "react";
+  19 |  import apiClient from "../../../api/apiClient";
+     |                         ^
+  20 |  import { useAuth } from "../../../context/AuthContext";
+  21 |  import styles from "./Manager.module.css";
+      at TransformPluginContext._formatError (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/orcungulay/Downloads/bonapipet/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+2:05:57 AM [vite] hmr update /src/pages/admin/AdminDashboard.jsx
+2:13:07 AM [vite] vite.config.js changed, restarting server...
+2:13:07 AM [vite] server restarted.
+2:26:20 AM [vite] vite.config.js changed, restarting server...
+Port 5174 is in use, trying another one...
+2:26:20 AM [vite] server restarted.
+
+  ➜  Local:   http://localhost:5175/
+  ➜  Network: use --host to expose

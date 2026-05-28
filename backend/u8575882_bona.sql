@@ -1,0 +1,992 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.2
+-- https://www.phpmyadmin.net/
+--
+-- Anamakine: localhost:3306
+-- Üretim Zamanı: 19 May 2026, 20:25:13
+-- Sunucu sürümü: 10.6.26-MariaDB
+-- PHP Sürümü: 8.4.21
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Veritabanı: `u8575882_bona`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `altsayfa`
+--
+
+CREATE TABLE `altsayfa` (
+  `id` int(9) UNSIGNED NOT NULL,
+  `urunadi` text DEFAULT NULL,
+  `seo` text NOT NULL,
+  `aciklama` text NOT NULL,
+  `tarih` text NOT NULL,
+  `resimbuyuk` text NOT NULL,
+  `resimkucuk` varchar(100) NOT NULL,
+  `kod` varchar(64) NOT NULL,
+  `meta` text NOT NULL,
+  `keyword` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin5 COLLATE=latin5_turkish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `ayarlar`
+--
+
+CREATE TABLE `ayarlar` (
+  `id` int(9) UNSIGNED NOT NULL,
+  `siteadi` text DEFAULT NULL,
+  `siteadresi` text DEFAULT NULL,
+  `slogan` text DEFAULT NULL,
+  `title` text DEFAULT NULL,
+  `meta` text DEFAULT NULL,
+  `footer` text DEFAULT NULL,
+  `facebook` text DEFAULT NULL,
+  `twitter` text DEFAULT NULL,
+  `rss` text DEFAULT NULL,
+  `google` text DEFAULT NULL,
+  `mail` text DEFAULT NULL,
+  `firmaadresi` text DEFAULT NULL,
+  `telefon` text DEFAULT NULL,
+  `gsm` text DEFAULT NULL,
+  `yetkili` text DEFAULT NULL,
+  `keyword` text DEFAULT NULL,
+  `analiz` text NOT NULL,
+  `anasayfa` varchar(50) NOT NULL,
+  `hakkimizda` varchar(50) NOT NULL,
+  `koleksiyon` varchar(50) NOT NULL,
+  `magazalar` varchar(50) NOT NULL,
+  `haberler` varchar(50) NOT NULL,
+  `iletisim` varchar(50) NOT NULL,
+  `ayarno` mediumint(1) UNSIGNED NOT NULL DEFAULT 1
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+
+--
+-- Tablo döküm verisi `ayarlar`
+--
+
+INSERT INTO `ayarlar` (`id`, `siteadi`, `siteadresi`, `slogan`, `title`, `meta`, `footer`, `facebook`, `twitter`, `rss`, `google`, `mail`, `firmaadresi`, `telefon`, `gsm`, `yetkili`, `keyword`, `analiz`, `anasayfa`, `hakkimizda`, `koleksiyon`, `magazalar`, `haberler`, `iletisim`, `ayarno`) VALUES
+(1, 'Bona Pipet', 'http://localhost/kesan/', 'Bona Pipet', 'Bona Pipet', 'Bona Pipet', 'Bona Pipet', 'öçöç', 'öçöç', 'jghj', 'eGWzJqi21tjiFhpg5hU9Ns3_OKzimlxdzNWSUuN0D90', 'info@bonapipet.com', 'öçöçşişişişi', '0422 326 44 42', '0538 290 98 85', 'Abdulkadir Açıl', '', 'UA-42240357-1', 'Ana Sayfa', 'Hakkımızda', 'Koleksiyon', 'Mağazalar', 'Haberler', 'İletişim', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `counter_ips`
+--
+
+CREATE TABLE `counter_ips` (
+  `ip` varchar(15) CHARACTER SET latin5 COLLATE latin5_turkish_ci NOT NULL,
+  `visit` datetime NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Tablo döküm verisi `counter_ips`
+--
+
+INSERT INTO `counter_ips` (`ip`, `visit`) VALUES
+('159.146.26.90', '2026-05-19 18:40:53');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `counter_values`
+--
+
+CREATE TABLE `counter_values` (
+  `id` bigint(11) NOT NULL,
+  `day_id` bigint(11) NOT NULL,
+  `day_value` bigint(11) NOT NULL,
+  `yesterday_id` bigint(11) NOT NULL,
+  `yesterday_value` bigint(11) NOT NULL,
+  `week_id` bigint(11) NOT NULL,
+  `week_value` bigint(11) NOT NULL,
+  `month_id` bigint(11) NOT NULL,
+  `month_value` bigint(11) NOT NULL,
+  `year_id` bigint(11) NOT NULL,
+  `year_value` bigint(11) NOT NULL,
+  `all_value` bigint(11) NOT NULL,
+  `record_date` datetime NOT NULL,
+  `record_value` bigint(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Tablo döküm verisi `counter_values`
+--
+
+INSERT INTO `counter_values` (`id`, `day_id`, `day_value`, `yesterday_id`, `yesterday_value`, `week_id`, `week_value`, `month_id`, `month_value`, `year_id`, `year_value`, `all_value`, `record_date`, `record_value`) VALUES
+(1, 138, 9, 137, 11, 21, 20, 5, 640, 2026, 3132, 40010, '2024-07-04 23:40:31', 418);
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `degerler`
+--
+
+CREATE TABLE `degerler` (
+  `id` int(9) UNSIGNED NOT NULL,
+  `no` text DEFAULT NULL,
+  `seo` text NOT NULL,
+  `meta` text NOT NULL,
+  `keyword` text NOT NULL,
+  `bitis` text NOT NULL,
+  `idare` text NOT NULL,
+  `aciklama` text NOT NULL,
+  `tarih` text NOT NULL,
+  `resim` text NOT NULL,
+  `kategori` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `fotokategori`
+--
+
+CREATE TABLE `fotokategori` (
+  `id` int(9) UNSIGNED NOT NULL,
+  `no` text DEFAULT NULL,
+  `seo` text NOT NULL,
+  `keyword` text NOT NULL,
+  `meta` text NOT NULL,
+  `dil` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+
+--
+-- Tablo döküm verisi `fotokategori`
+--
+
+INSERT INTO `fotokategori` (`id`, `no`, `seo`, `keyword`, `meta`, `dil`) VALUES
+(100, 'Pipetler', 'pipetler', 'Pipetler', 'Pipetler', 'tr'),
+(102, 'Özel Üretim Pipet', 'ozel-uretim-pipet', 'Özel Üretim Pipet', 'Özel Üretim Pipet', 'tr'),
+(103, 'Straw', 'straw', 'Straw', 'Straw', 'en'),
+(104, 'Special Production', 'special-production', 'Special Production', 'Special Production', 'en'),
+(105, 'Pipette', 'pipette', 'Pipette', 'Pipette', 'de'),
+(106, 'Sonderanfertigung', 'sonderanfertigung', 'Sonderanfertigung', 'Sonderanfertigung', 'de'),
+(107, 'Pipette', 'pipette', 'Pipette', 'Pipette', 'fr'),
+(108, 'Production Sur Mesure', 'production-sur-mesure', 'Production Sur Mesure', 'Production Sur Mesure', 'fr'),
+(109, 'пипетка', 'pipetka', 'пипетка', 'пипетка', 'ru'),
+(110, 'Специальная продукция', 'specialnaya-produkciya', 'Специальная продукция', 'Специальная продукция', 'ru'),
+(111, 'Pipeta', 'pipeta', 'Pipeta', 'Pipeta', 'sp'),
+(112, 'Producción Personalizada', 'producci-n-personalizada', 'Producción Personalizada', 'Producción Personalizada', 'sp'),
+(113, 'ماصة', 'ماصة', 'ماصة', 'ماصة', 'ar'),
+(114, 'إنتاج خاص', 'إنتاج-خاص', 'إنتاج خاص', 'إنتاج خاص', 'ar');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `fotolar`
+--
+
+CREATE TABLE `fotolar` (
+  `id` int(9) UNSIGNED NOT NULL,
+  `kucuk` text DEFAULT NULL,
+  `buyuk` text NOT NULL,
+  `kategori` text CHARACTER SET utf8mb3 COLLATE utf8mb3_turkish_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin5 COLLATE=latin5_turkish_ci;
+
+--
+-- Tablo döküm verisi `fotolar`
+--
+
+INSERT INTO `fotolar` (`id`, `kucuk`, `buyuk`, `kategori`) VALUES
+(157, '3330170586705263416687.jpg', '3330170586705263416_buyuk.jpg', 'artistik-pipet'),
+(137, 'galeri_510.jpg', 'galeri__buyuk_694.jpg', 'artistik-pipet'),
+(135, 'galeri_103.jpg', 'galeri__buyuk_260.jpg', 'jelatinli-koruklu-pipet'),
+(134, 'galeri_859.jpg', 'galeri__buyuk_339.jpg', 'jelatinli-koruklu-pipet'),
+(133, 'galeri_314.jpg', 'galeri__buyuk_590.jpg', 'koruklu-pipet'),
+(132, 'galeri_507.jpg', 'galeri__buyuk_106.jpg', 'koruklu-pipet'),
+(131, 'galeri_642.jpg', 'galeri__buyuk_385.jpg', 'koruklu-pipet'),
+(128, 'galeri_775.jpg', 'galeri__buyuk_593.jpg', 'jelatinli-koruklu-frozen-pipet'),
+(127, 'galeri_358.jpg', 'galeri__buyuk_916.jpg', 'jelatinli-koruklu-frozen-pipet'),
+(126, 'galeri_517.jpg', 'galeri__buyuk_622.jpg', 'frozen-koruklu-pipet'),
+(109, 'galeri_527.jpg', 'galeri__buyuk_342.jpg', 'duz-pipet'),
+(110, 'galeri_790.jpg', 'galeri__buyuk_429.jpg', 'duz-kagitli-pipet'),
+(111, 'galeri_502.jpg', 'galeri__buyuk_992.jpg', 'duz-kagitli-pipet'),
+(112, 'galeri_160.jpg', 'galeri__buyuk_575.jpg', 'duz-jelatinli-pipet'),
+(114, 'galeri_867.jpg', 'galeri__buyuk_485.jpg', 'duz-jelatinli-pipet'),
+(115, 'galeri_168.jpg', 'galeri__buyuk_508.jpg', 'frozen-duz-pipet'),
+(116, 'galeri_142.jpg', 'galeri__buyuk_491.jpg', 'frozen-duz-pipet'),
+(117, 'galeri_821.jpg', 'galeri__buyuk_129.jpg', 'frozen-duz-pipet'),
+(118, 'galeri_422.jpg', 'galeri__buyuk_420.jpg', 'frozen-duz-pipet'),
+(119, 'galeri_142.jpg', 'galeri__buyuk_230.jpg', 'frozen-duz-pipet'),
+(120, 'galeri_886.jpg', 'galeri__buyuk_69.jpg', 'frozen-duz-pipet'),
+(121, 'galeri_724.jpg', 'galeri__buyuk_150.jpg', 'frozen-duz-pipet'),
+(122, 'galeri_610.jpg', 'galeri__buyuk_357.jpg', 'frozen-duz-pipet'),
+(123, 'galeri_150.jpg', 'galeri__buyuk_110.jpg', 'frozen-kagitli-pipet'),
+(124, 'galeri_57.jpg', 'galeri__buyuk_662.jpg', 'frozen-kagitli-pipet'),
+(125, 'galeri_639.jpg', 'galeri__buyuk_320.jpg', 'frozen-koruklu-pipet'),
+(130, 'galeri_518.jpg', 'galeri__buyuk_920.jpg', 'kagitli-koruklu-frozen-pipet'),
+(129, 'galeri_59.jpg', 'galeri__buyuk_893.jpg', 'kagitli-koruklu-frozen-pipet'),
+(108, 'galeri_485.jpg', 'galeri__buyuk.jpg', 'duz-pipet'),
+(356, '513429602401127916097.jpg', '5134296024011279160_buyuk.jpg', 'sertifika'),
+(140, 'galeri_367.jpg', 'galeri__buyuk_262.jpg', 'sertifika'),
+(141, 'galeri_238.jpg', 'galeri__buyuk_102.jpg', 'sertifika'),
+(151, '5132116720908256056101.jpg', '5132116720908256056_buyuk.jpg', 'galeri'),
+(148, '2692200909886157112350.jpg', '2692200909886157112_buyuk.jpg', 'galeri'),
+(149, '8582225673728522040176.jpg', '8582225673728522040_buyuk.jpg', 'galeri'),
+(150, '7453798134293835576582.jpg', '7453798134293835576_buyuk.jpg', 'galeri'),
+(153, '380162116554133432219.jpg', '380162116554133432_buyuk.jpg', 'baskili-pipet'),
+(154, '5719762171308231480842.jpg', '5719762171308231480_buyuk.jpg', 'baskili-pipet'),
+(155, '7954512573778638648662.jpg', '7954512573778638648_buyuk.jpg', 'baskili-pipet'),
+(156, '272532850504007672652.jpg', '272532850504007672_buyuk.jpg', 'artistik-pipet'),
+(158, '4447398549980631864622.jpg', '4447398549980631864_buyuk.jpg', 'straight-straw'),
+(159, '970232768191310776436.jpg', '970232768191310776_buyuk.jpg', 'straight-straw'),
+(160, '821573660191563141619.jpg', '8215736601915631416_buyuk.jpg', 'gerade-pipette'),
+(161, '276645010958121400843.jpg', '2766450109581214008_buyuk.jpg', 'gerade-pipette'),
+(162, '3170964490208418104920.jpg', '3170964490208418104_buyuk.jpg', 'pipette-droite'),
+(163, '3136316037012528952536.jpg', '3136316037012528952_buyuk.jpg', 'pipette-droite'),
+(164, '4267987662719401784629.jpg', '4267987662719401784_buyuk.jpg', 'pipette-droite'),
+(165, '4725472140643373880208.jpg', '4725472140643373880_buyuk.jpg', 'pipette-droite'),
+(166, '4849117795626362680659.jpg', '4849117795626362680_buyuk.jpg', 'pryamaya-pipetka'),
+(167, '3883561690648446776807.jpg', '3883561690648446776_buyuk.jpg', 'pryamaya-pipetka'),
+(168, '4505936445461422904277.jpg', '4505936445461422904_buyuk.jpg', 'pipeta-recta'),
+(169, '7895992191301461816779.jpg', '7895992191301461816_buyuk.jpg', 'pipeta-recta'),
+(172, '6528896283772280632959.jpg', '6528896283772280632_buyuk.jpg', 'مستقيم-ماصة'),
+(173, '50824518418982725677.jpg', '508245184189827256_buyuk.jpg', 'مستقيم-ماصة'),
+(174, '507906876918346220095.jpg', '5079068769183462200_buyuk.jpg', 'straight-wrapped-paper-straw'),
+(175, '7908049490716732216438.jpg', '7908049490716732216_buyuk.jpg', 'straight-wrapped-paper-straw'),
+(176, '8401449148853624632876.jpg', '8401449148853624632_buyuk.jpg', 'flache-papierpipette'),
+(177, '7941099666059027256554.jpg', '7941099666059027256_buyuk.jpg', 'flache-papierpipette'),
+(178, '4711791401108148024217.jpg', '4711791401108148024_buyuk.jpg', 'pipette-de-papier-plat'),
+(179, '4425908277432168760281.jpg', '4425908277432168760_buyuk.jpg', 'pipette-de-papier-plat'),
+(180, '789104480710375480433.jpg', '789104480710375480_buyuk.jpg', 'ploskaya-bumazhnaya-pipetka'),
+(181, '7201249988542679864622.jpg', '7201249988542679864_buyuk.jpg', 'ploskaya-bumazhnaya-pipetka'),
+(182, '855032468835513119246.jpg', '8550324688355131192_buyuk.jpg', 'ploskaya-bumazhnaya-pipetka'),
+(183, '8339046604103518008907.jpg', '8339046604103518008_buyuk.jpg', 'pipeta-de-papel-plano'),
+(184, '3147615277104964920835.jpg', '3147615277104964920_buyuk.jpg', 'pipeta-de-papel-plano'),
+(185, '2218704823818538552526.jpg', '2218704823818538552_buyuk.jpg', 'ورقة-مسطحة-ماصة'),
+(186, '472186567882780984435.jpg', '472186567882780984_buyuk.jpg', 'ورقة-مسطحة-ماصة'),
+(187, '4873791949616578360301.jpg', '4873791949616578360_buyuk.jpg', 'straight-wrapped-gelatin-straw'),
+(188, '1254354127579341624522.jpg', '1254354127579341624_buyuk.jpg', 'straight-wrapped-gelatin-straw'),
+(189, '3671144569913598776882.jpg', '3671144569913598776_buyuk.jpg', 'gerade-gelatinepipette'),
+(190, '5562871342731880248429.jpg', '5562871342731880248_buyuk.jpg', 'gerade-gelatinepipette'),
+(191, '1849482978383770424627.jpg', '1849482978383770424_buyuk.jpg', 'pipette-g-latine-droite'),
+(192, '4214470908045815608252.jpg', '4214470908045815608_buyuk.jpg', 'pipette-g-latine-droite'),
+(193, '5684245700637531960781.jpg', '5684245700637531960_buyuk.jpg', 'pryamaya-zhelatinovaya-pipetka'),
+(194, '3748864788148190008301.jpg', '3748864788148190008_buyuk.jpg', 'pryamaya-zhelatinovaya-pipetka'),
+(195, '4454936691456415544774.jpg', '4454936691456415544_buyuk.jpg', 'pipeta-de-gelatina-recta'),
+(196, '6372304865055639352227.jpg', '6372304865055639352_buyuk.jpg', 'pipeta-de-gelatina-recta'),
+(197, '90428060955559448610.jpg', '90428060955559448_buyuk.jpg', 'الجيلاتين-مستقيم-ماصة'),
+(198, '1289828374154113848607.jpg', '1289828374154113848_buyuk.jpg', 'الجيلاتين-مستقيم-ماصة'),
+(199, '7879119035270488888697.jpg', '7879119035270488888_buyuk.jpg', 'frozen-straight-straw'),
+(200, '6398431973324906296114.jpg', '6398431973324906296_buyuk.jpg', 'frozen-straight-straw'),
+(201, '26584145675103491122.jpg', '2658414567510349112_buyuk.jpg', 'frozen-straight-straw'),
+(202, '1663082602123491640184.jpg', '1663082602123491640_buyuk.jpg', 'frozen-straight-straw'),
+(203, '2354439770182039352141.jpg', '2354439770182039352_buyuk.jpg', 'frozen-straight-straw'),
+(204, '1218301558660213048803.jpg', '1218301558660213048_buyuk.jpg', 'frozen-straight-straw'),
+(205, '3766240850091031864972.jpg', '3766240850091031864_buyuk.jpg', 'frozen-straight-straw'),
+(206, '2305641894539263288210.jpg', '2305641894539263288_buyuk.jpg', 'gefrorene-gerade-pipette'),
+(207, '1451149454547373624639.jpg', '1451149454547373624_buyuk.jpg', 'gefrorene-gerade-pipette'),
+(208, '143882746497797484048.jpg', '1438827464977974840_buyuk.jpg', 'gefrorene-gerade-pipette'),
+(209, '2666244854529761080553.jpg', '2666244854529761080_buyuk.jpg', 'gefrorene-gerade-pipette'),
+(210, '4759417722622594872680.jpg', '4759417722622594872_buyuk.jpg', 'gefrorene-gerade-pipette'),
+(211, '4947361350059548472286.jpg', '4947361350059548472_buyuk.jpg', 'gefrorene-gerade-pipette'),
+(212, '5144910551607646008215.jpg', '5144910551607646008_buyuk.jpg', 'gefrorene-gerade-pipette'),
+(213, '3321232315566860600664.jpg', '3321232315566860600_buyuk.jpg', 'pipette-droite-congel-e'),
+(214, '4012535611788480824495.jpg', '4012535611788480824_buyuk.jpg', 'pipette-droite-congel-e'),
+(215, '306834148036194936939.jpg', '306834148036194936_buyuk.jpg', 'pipette-droite-congel-e'),
+(216, '5304498875306748728646.jpg', '5304498875306748728_buyuk.jpg', 'pipette-droite-congel-e'),
+(217, '143151386744533688433.jpg', '143151386744533688_buyuk.jpg', 'pipette-droite-congel-e'),
+(218, '2273033501373463096300.jpg', '2273033501373463096_buyuk.jpg', 'pipette-droite-congel-e'),
+(219, '478823706507766904970.jpg', '478823706507766904_buyuk.jpg', 'pipette-droite-congel-e'),
+(220, '1912816253801256760871.jpg', '1912816253801256760_buyuk.jpg', 'pipette-droite-congel-e'),
+(221, '6441062663992270648997.jpg', '6441062663992270648_buyuk.jpg', 'zamorozhennaya-pryamaya-pipetka'),
+(222, '8721561423606344504260.jpg', '8721561423606344504_buyuk.jpg', 'zamorozhennaya-pryamaya-pipetka'),
+(223, '1631619011362466360239.jpg', '1631619011362466360_buyuk.jpg', 'zamorozhennaya-pryamaya-pipetka'),
+(224, '6904735647969795896452.jpg', '6904735647969795896_buyuk.jpg', 'zamorozhennaya-pryamaya-pipetka'),
+(225, '737406706644510648125.jpg', '737406706644510648_buyuk.jpg', 'zamorozhennaya-pryamaya-pipetka'),
+(226, '4015210349526719288498.jpg', '4015210349526719288_buyuk.jpg', 'zamorozhennaya-pryamaya-pipetka'),
+(227, '4001539457175515960261.jpg', '4001539457175515960_buyuk.jpg', 'zamorozhennaya-pryamaya-pipetka'),
+(228, '1182665899396019768614.jpg', '1182665899396019768_buyuk.jpg', 'pipeta-recta-congelada'),
+(229, '817196628699700818448.jpg', '8171966286997008184_buyuk.jpg', 'pipeta-recta-congelada'),
+(230, '4419204820361447224404.jpg', '4419204820361447224_buyuk.jpg', 'pipeta-recta-congelada'),
+(231, '8119545334743137080116.jpg', '8119545334743137080_buyuk.jpg', 'pipeta-recta-congelada'),
+(232, '5694870472782220088205.jpg', '5694870472782220088_buyuk.jpg', 'pipeta-recta-congelada'),
+(233, '4001373023622614840414.jpg', '4001373023622614840_buyuk.jpg', 'pipeta-recta-congelada'),
+(234, '3957713122169226040713.jpg', '3957713122169226040_buyuk.jpg', 'pipeta-recta-congelada'),
+(235, '1890786244637506360572.jpg', '1890786244637506360_buyuk.jpg', 'ماصة-مجمدة-مستقيمة'),
+(236, '2574081880350970680486.jpg', '2574081880350970680_buyuk.jpg', 'ماصة-مجمدة-مستقيمة'),
+(237, '393325582974571832936.jpg', '393325582974571832_buyuk.jpg', 'ماصة-مجمدة-مستقيمة'),
+(238, '8767411344581181240191.jpg', '8767411344581181240_buyuk.jpg', 'ماصة-مجمدة-مستقيمة'),
+(239, '4047835444410690360657.jpg', '4047835444410690360_buyuk.jpg', 'ماصة-مجمدة-مستقيمة'),
+(240, '928370228244278328380.jpg', '928370228244278328_buyuk.jpg', 'ماصة-مجمدة-مستقيمة'),
+(241, '384727150615723704883.jpg', '3847271506157237048_buyuk.jpg', 'ماصة-مجمدة-مستقيمة'),
+(242, '8225346501502733112790.jpg', '8225346501502733112_buyuk.jpg', 'frozen-wrapped-paper-straw'),
+(243, '8638993936280411960265.jpg', '8638993936280411960_buyuk.jpg', 'frozen-wrapped-paper-straw'),
+(244, '3791061602532914488873.jpg', '3791061602532914488_buyuk.jpg', 'gefrorene-papierpipette'),
+(245, '8331886302265861944413.jpg', '8331886302265861944_buyuk.jpg', 'gefrorene-papierpipette'),
+(246, '1602816006375756600562.jpg', '1602816006375756600_buyuk.jpg', 'pipette-de-papier-congel'),
+(247, '5817013279431426872140.jpg', '5817013279431426872_buyuk.jpg', 'pipette-de-papier-congel'),
+(248, '8851208388805390136467.jpg', '8851208388805390136_buyuk.jpg', 'zamorozhennaya-bumazhnaya-pipetka'),
+(249, '2323631424870821688206.jpg', '2323631424870821688_buyuk.jpg', 'zamorozhennaya-bumazhnaya-pipetka'),
+(250, '7868622160620170040167.jpg', '7868622160620170040_buyuk.jpg', 'pipeta-de-papel-congelado'),
+(251, '375955286953269496854.jpg', '375955286953269496_buyuk.jpg', 'pipeta-de-papel-congelado'),
+(252, '1304903696808625976887.jpg', '1304903696808625976_buyuk.jpg', 'مجمد-ورق-مجمد'),
+(253, '4560868818726847800401.jpg', '4560868818726847800_buyuk.jpg', 'مجمد-ورق-مجمد'),
+(254, '8835471334556739384413.jpg', '8835471334556739384_buyuk.jpg', 'artistic-straw'),
+(255, '5757856410410700600594.jpg', '5757856410410700600_buyuk.jpg', 'artistic-straw'),
+(256, '3427563901576785720710.jpg', '3427563901576785720_buyuk.jpg', 'artistic-straw'),
+(257, '6221627307434903352807.jpg', '6221627307434903352_buyuk.jpg', 'kunstlerische-pipette'),
+(258, '3452570276955817784945.jpg', '3452570276955817784_buyuk.jpg', 'kunstlerische-pipette'),
+(259, '521797479854773368865.jpg', '521797479854773368_buyuk.jpg', 'kunstlerische-pipette'),
+(260, '910639700790326072221.jpg', '910639700790326072_buyuk.jpg', 'pipette-artistique'),
+(261, '5476650247971251000545.jpg', '5476650247971251000_buyuk.jpg', 'pipette-artistique'),
+(262, '1241628134416285752250.jpg', '1241628134416285752_buyuk.jpg', 'pipette-artistique'),
+(263, '238621404601554488539.jpg', '238621404601554488_buyuk.jpg', 'hudozhestvennaya-pipetka'),
+(264, '6541795275277585208430.jpg', '6541795275277585208_buyuk.jpg', 'hudozhestvennaya-pipetka'),
+(265, '1071044873032383160335.jpg', '1071044873032383160_buyuk.jpg', 'hudozhestvennaya-pipetka'),
+(266, '6646547242999099192816.jpg', '6646547242999099192_buyuk.jpg', 'pipeta-art-stica'),
+(267, '2727111499342715192490.jpg', '2727111499342715192_buyuk.jpg', 'pipeta-art-stica'),
+(268, '718424758977441976391.jpg', '718424758977441976_buyuk.jpg', 'pipeta-art-stica'),
+(269, '5970609585444161336864.jpg', '5970609585444161336_buyuk.jpg', 'ماصة-فنية'),
+(270, '1455923070510302776623.jpg', '1455923070510302776_buyuk.jpg', 'ماصة-فنية'),
+(271, '8331278326610729784138.jpg', '8331278326610729784_buyuk.jpg', 'ماصة-فنية'),
+(272, '3032789511813116216294.jpg', '3032789511813116216_buyuk.jpg', 'special-production-straw'),
+(273, '8711311904092631864914.jpg', '8711311904092631864_buyuk.jpg', 'special-production-straw'),
+(274, '1852133439646897208631.jpg', '1852133439646897208_buyuk.jpg', 'gedruckte-pipette'),
+(275, '3490742122133627192658.jpg', '3490742122133627192_buyuk.jpg', 'gedruckte-pipette'),
+(276, '4259366148875865912632.jpg', '4259366148875865912_buyuk.jpg', 'pipette-imprim-e'),
+(277, '5242007263004816184479.jpg', '5242007263004816184_buyuk.jpg', 'pipette-imprim-e'),
+(278, '7350466781192371000411.jpg', '7350466781192371000_buyuk.jpg', 'pipetka-s-printom'),
+(279, '8449909430411131704250.jpg', '8449909430411131704_buyuk.jpg', 'pipetka-s-printom'),
+(280, '452336623436959160291.jpg', '452336623436959160_buyuk.jpg', 'pipeta-impresa'),
+(281, '7169887121352901432201.jpg', '7169887121352901432_buyuk.jpg', 'pipeta-impresa'),
+(282, '6099391252630314808867.jpg', '6099391252630314808_buyuk.jpg', 'ماصة-مطبوعة'),
+(283, '1628849535352726584235.jpg', '1628849535352726584_buyuk.jpg', 'ماصة-مطبوعة'),
+(284, '5248136834965848888455.jpg', '5248136834965848888_buyuk.jpg', 'frozen-flexible-straw'),
+(285, '7717720034221819704834.jpg', '7717720034221819704_buyuk.jpg', 'frozen-flexible-straw'),
+(286, '6373539728422984504488.jpg', '6373539728422984504_buyuk.jpg', 'gefrorene-balgenpipette'),
+(287, '1647328643335308856587.jpg', '1647328643335308856_buyuk.jpg', 'gefrorene-balgenpipette'),
+(288, '1070925340884339896886.jpg', '1070925340884339896_buyuk.jpg', 'pipette-soufflets-congel-s'),
+(289, '8781530439025827640198.jpg', '8781530439025827640_buyuk.jpg', 'pipette-soufflets-congel-s'),
+(290, '7312974354459196216380.jpg', '7312974354459196216_buyuk.jpg', 'pipetka-s-zamorozhennymi-silfonami'),
+(291, '8495231825444437816723.jpg', '8495231825444437816_buyuk.jpg', 'pipetka-s-zamorozhennymi-silfonami'),
+(292, '4324506521225021240531.jpg', '4324506521225021240_buyuk.jpg', 'pipeta-de-fuelle-congelado'),
+(293, '8124696012172442424409.jpg', '8124696012172442424_buyuk.jpg', 'pipeta-de-fuelle-congelado'),
+(294, '850382732848406712155.jpg', '850382732848406712_buyuk.jpg', 'خرطوم-المجمدة-ماصة'),
+(295, '4362088905440482104889.jpg', '4362088905440482104_buyuk.jpg', 'خرطوم-المجمدة-ماصة'),
+(296, '3315691380865100088779.jpg', '3315691380865100088_buyuk.jpg', 'wrapped-gelatin-flexible-frozen-straw'),
+(297, '6014559302065136440216.jpg', '6014559302065136440_buyuk.jpg', 'wrapped-gelatin-flexible-frozen-straw'),
+(298, '8708416529827649336682.jpg', '8708416529827649336_buyuk.jpg', 'gelatineb-lge-gefrorene-pipette'),
+(299, '3755590762529159480598.jpg', '3755590762529159480_buyuk.jpg', 'gelatineb-lge-gefrorene-pipette'),
+(300, '7531938743260185400704.jpg', '7531938743260185400_buyuk.jpg', 'pipette-congel-e-soufflet-de-g-latine'),
+(301, '5804045072032376632749.jpg', '5804045072032376632_buyuk.jpg', 'pipette-congel-e-soufflet-de-g-latine'),
+(302, '7378514276610495288391.jpg', '7378514276610495288_buyuk.jpg', 'zhelatinovyj-silfon-zamorozhennaya-pipetka'),
+(303, '6948844442764938040188.jpg', '6948844442764938040_buyuk.jpg', 'pipetka-s-zamorozhennymi-silfonami'),
+(304, '1559945684340338488180.jpg', '1559945684340338488_buyuk.jpg', 'pipeta-congelada-de-gelatina-de-fuelle'),
+(305, '2221023928788039992456.jpg', '2221023928788039992_buyuk.jpg', 'pipeta-congelada-de-gelatina-de-fuelle'),
+(306, '3413413138025391416944.jpg', '3413413138025391416_buyuk.jpg', 'الجيلاتين-الخوار-المجمدة-الماصة'),
+(307, '2224213704466886456918.jpg', '2224213704466886456_buyuk.jpg', 'الجيلاتين-الخوار-المجمدة-الماصة'),
+(308, '1011122982535176120950.jpg', '1011122982535176120_buyuk.jpg', 'wrapped-gelatin-flexible-straw'),
+(309, '7220141597920011064570.jpg', '7220141597920011064_buyuk.jpg', 'wrapped-gelatin-flexible-straw'),
+(310, '3433877262804298040241.jpg', '3433877262804298040_buyuk.jpg', 'gelatine-faltenbalg-pipette'),
+(311, '6188473121987476280974.jpg', '6188473121987476280_buyuk.jpg', 'gelatine-faltenbalg-pipette'),
+(312, '1450924339393849144536.jpg', '1450924339393849144_buyuk.jpg', 'pipette-soufflet-g-latine'),
+(313, '4628615031639778104223.jpg', '4628615031639778104_buyuk.jpg', 'pipette-soufflet-g-latine'),
+(314, '1648278753790662968862.jpg', '1648278753790662968_buyuk.jpg', 'zhelatinovaya-silfonnaya-pipetka'),
+(315, '4741921329663901496952.jpg', '4741921329663901496_buyuk.jpg', 'zhelatinovaya-silfonnaya-pipetka'),
+(316, '536182237168236664141.jpg', '536182237168236664_buyuk.jpg', 'pipeta-de-fuelle-de-gelatina'),
+(317, '8045211624768054072482.jpg', '8045211624768054072_buyuk.jpg', 'pipeta-de-fuelle-de-gelatina'),
+(318, '2633800084392292152826.jpg', '2633800084392292152_buyuk.jpg', 'الجيلاتين-الخوار-الماصة'),
+(319, '816192491186990469691.jpg', '8161924911869904696_buyuk.jpg', 'الجيلاتين-الخوار-الماصة'),
+(320, '825376732067929989662.jpg', '8253767320679299896_buyuk.jpg', 'wrapped-paper-flexible-frozen-straw'),
+(321, '5627982161111334712129.jpg', '5627982161111334712_buyuk.jpg', 'wrapped-paper-flexible-frozen-straw'),
+(322, '749253573103084933691.jpg', '7492535731030849336_buyuk.jpg', 'papierb-lge-gefrorene-pipette'),
+(323, '7353309111462714168477.jpg', '7353309111462714168_buyuk.jpg', 'papierb-lge-gefrorene-pipette'),
+(324, '3805352904730424120810.jpg', '3805352904730424120_buyuk.jpg', 'pipette-congel-e-soufflet-en-papier'),
+(325, '279785849981923896924.jpg', '279785849981923896_buyuk.jpg', 'pipette-congel-e-soufflet-en-papier'),
+(326, '5302069319619108664232.jpg', '5302069319619108664_buyuk.jpg', 'bumazhnye-mehi-zamorozhennaya-pipetka'),
+(327, '8144548117286636344166.jpg', '8144548117286636344_buyuk.jpg', 'bumazhnye-mehi-zamorozhennaya-pipetka'),
+(328, '1258143141037964344117.jpg', '1258143141037964344_buyuk.jpg', 'pipeta-de-papel-fuelle-congelado'),
+(329, '345145252015861023295.jpg', '3451452520158610232_buyuk.jpg', 'pipeta-de-papel-fuelle-congelado'),
+(330, '5253457894755771192586.jpg', '5253457894755771192_buyuk.jpg', 'المناديل-الورقية-المجوفة-المجمدة'),
+(331, '6052334631482788664678.jpg', '6052334631482788664_buyuk.jpg', 'المناديل-الورقية-المجوفة-المجمدة'),
+(332, '2320633460250231608991.jpg', '2320633460250231608_buyuk.jpg', 'flexible-straw'),
+(333, '7053472379015570232400.jpg', '7053472379015570232_buyuk.jpg', 'flexible-straw'),
+(334, '646838156299460997699.jpg', '6468381562994609976_buyuk.jpg', 'flexible-straw'),
+(335, '7211573529574623032842.jpg', '7211573529574623032_buyuk.jpg', 'handliche-pipette'),
+(336, '641615891622254904955.jpg', '641615891622254904_buyuk.jpg', 'handliche-pipette'),
+(337, '2136248354282711608227.jpg', '2136248354282711608_buyuk.jpg', 'handliche-pipette'),
+(338, '1896609961986611768691.jpg', '1896609961986611768_buyuk.jpg', 'pipette-pratique'),
+(339, '4852712899446527800204.jpg', '4852712899446527800_buyuk.jpg', 'pipette-pratique'),
+(340, '59400774621301522484.jpg', '5940077462130152248_buyuk.jpg', 'pipette-pratique'),
+(341, '3303826165696041272865.jpg', '3303826165696041272_buyuk.jpg', 'udobnaya-pipetka'),
+(342, '3526142595542855480192.jpg', '3526142595542855480_buyuk.jpg', 'udobnaya-pipetka'),
+(343, '2793003150986361656131.jpg', '2793003150986361656_buyuk.jpg', 'udobnaya-pipetka'),
+(344, '5569627938999103288844.jpg', '5569627938999103288_buyuk.jpg', 'pipeta-de-mano'),
+(345, '8000714741647252280159.jpg', '8000714741647252280_buyuk.jpg', 'pipeta-de-mano'),
+(346, '699317247089414431228.jpg', '6993172470894144312_buyuk.jpg', 'pipeta-de-mano'),
+(347, '4810843430459540280740.jpg', '4810843430459540280_buyuk.jpg', 'مفيد-ماصة'),
+(348, '69292477808065083441.jpg', '6929247780806508344_buyuk.jpg', 'مفيد-ماصة'),
+(349, '4242302589118527288842.jpg', '4242302589118527288_buyuk.jpg', 'مفيد-ماصة'),
+(355, '2679887124233837880433.jpg', '2679887124233837880_buyuk.jpg', 'sertifika'),
+(354, '2637812669078571832236.jpg', '2637812669078571832_buyuk.jpg', 'sertifika');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `haber`
+--
+
+CREATE TABLE `haber` (
+  `id` int(9) UNSIGNED NOT NULL,
+  `no` text DEFAULT NULL,
+  `seo` text NOT NULL,
+  `keyword` text NOT NULL,
+  `meta` text NOT NULL,
+  `aciklama` text NOT NULL,
+  `tarih` text NOT NULL,
+  `resim` text NOT NULL,
+  `dil` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+
+--
+-- Tablo döküm verisi `haber`
+--
+
+INSERT INTO `haber` (`id`, `no`, `seo`, `keyword`, `meta`, `aciklama`, `tarih`, `resim`, `dil`) VALUES
+(84, 'Türkiye’nin Yüzde 70 İhtiyacını Elazığ Karşılıyor', 'turkiye-nin-yuzde-70-ihtiyacini-elazig-karsiliyor', 'Türkiye’nin Yüzde 70 İhtiyacını Elazığ Karşılıyor', 'Türkiye’nin Yüzde 70 İhtiyacını Elazığ Karşılıyor', '&lt;p&gt;Elazığ\'da üretim yapan bir firma Türkiye\'nin yaklaşık yüzde 70 pipet ihtiyacını karşılıyor. Türkiye\'nin her şehrine Elazığ\'dan gönderilen pipetler yurt dışına da ihraç ediliyor.&lt;/p&gt;\r\n&lt;p&gt;Elazığ Organize Sanayi Bölgesi\'nde faaliyet gösteren firma Elazığ\'dan Türkiye piyasasını yönetiyor. Pipet üretiminde Türkiye\'nin en büyük firmalarından olan şirket; ülkenin pipet ihtiyacının yüzde 70\'ini karşılıyor.&lt;/p&gt;\r\n&lt;p&gt;&lt;img src=\\&quot;/dosyalar/3.jpg\\&quot; width=\\&quot;1000\\&quot; height=\\&quot;567\\&quot; alt=\\&quot;\\&quot; /&gt;&lt;/p&gt;\r\n&lt;p&gt;&lt;b&gt;YABAŞ: TOPLAMDA 75-80 KİŞİ ÇALIŞANIMIZ VAR&lt;/b&gt;&lt;/p&gt;\r\n&lt;p&gt;2013 yılından Elazığ\'da da faaliyet göstermeye başladıklarını ifade eden Soyplas Ambalaj Şirketi Yönetim Kurulu Başkanı Fethi Ahmet Yabaş, &amp;ldquo;Elazığlı olarak memleketimize yatırım yapalım diye 2013 yılında Elazığ Organize Sanayi Bölgesinde soyplas ambalaj diye firma kurduk. 2013 yılında şirketimiz kuruldu.2013 yılından sonra inşaat gibi işlerle uğraşan elazığ organize sanayi bölgesi 2014 yılında üretime başladık. Baleye filesi, gölgeleme filesi ve palet filesi olarak başladık. Şu anda 2014\'den sonra da üretim her yıl kapasite artırarak baleye filesi, gölgeleme filesi, balonlu naylon, ambalaj naylonu dediğimiz gibi çeşitler yapmaya başladık. Baleye filesi, palet filesi ve gölgeleme filesi ürünlerimiz Avrupa\'nın birçok ülkesine göndermekteyiz. Yaklaşık ürettiğimiz ürünlerin %50 %60\'ını yurt dışına satıyoruz. İş piyazı olarak da genellikle balon naylon ve pipet grubuna da genellikle iş piyazı için başladık ve şu anda 2013 yılında kurulduk 2014 yılında üretime başladığımız zaman burada 5 kişi çalışıyordu. Şu anda ise 60 kişi çalışanımız var 15 kişi de iş kur aracılığıyla destek verilen personel çalışanımız var. Toplamda 75-80 kişi çalışanımız var&amp;rdquo; ifadelerini kullandı.&lt;/p&gt;\r\n&lt;p&gt;&lt;img src=\\&quot;/dosyalar/2.jpg\\&quot; width=\\&quot;1000\\&quot; height=\\&quot;567\\&quot; alt=\\&quot;\\&quot; /&gt;&lt;/p&gt;\r\n&lt;p&gt;&lt;b&gt;YABAŞ: %80 KULLANAN PİPET ELAZIĞ\'A GİTMEKTEDİR&lt;/b&gt;&lt;/p&gt;\r\n&lt;p&gt;Pipet üretiminde Türkiye\'de eksiklik olduğunu fark eden Fethi Ahmet Yabaş, &amp;ldquo;2017 yılında da pipet üretimine başladık ve şu anda Türkiye de pipet üretiminde en büyük kapasiteye sahibiz. Pipette ambalaj sektöründe toptancılık yaptığımız için pipetin Türkiye de bir eksikliğini hissettik. Genellikle Çin de ve Bulgaristan da yapılan üretimler ihracat olarak değil de ithalat olarak geliyordu ve bunların eksikliğini görünce piyasa da olduğumuz için böyle bir araştırma yaparak yatırım yaptık. Beli bir süre sonra da kapasite artırarak Türkiye de en büyük üreticilerden biri olduk. Bu ürünlerimiz büyük ulusal marketlerde ve Türkiye\'nin hemen hemen %70 %80 pipet ihtiyacını karşılayacak kadar kapasitemiz var. Türkiye de turizmin önemli bir yeri var ve bunun en büyük yeri olarak Antalya görünüyor. Antalya da kullanan pipetin hemen hemen %80\'ni bizim pipetimiz veya %80 kullanan pipet Elazığ\'a gitmektedir&amp;rdquo; şeklinde konuştu.&lt;/p&gt;\r\n&lt;p&gt;&lt;img src=\\&quot;/dosyalar/1.jpg\\&quot; width=\\&quot;1000\\&quot; height=\\&quot;567\\&quot; alt=\\&quot;\\&quot; /&gt;&lt;/p&gt;\r\n&lt;p&gt;5 kişilik çıkılan yolda şuanda 75 kişi istihdam ediliyor. El emeğinin yoğun olduğu pipet üretiminde Elazığ, Türkiye piyasasına oldukça hakim. YABAŞ: TÜRKİYE\'YE HAKİM OLDUK AMA İHRACATA DA YENİ YENİ BAŞLADI Fethi Ahmet Yabaş, &amp;ldquo;Daha önce üretim olarak Türkiye\'de az bir üreticisi vardı. Aslında pipet dediğin zaman basit bir şey görünüyor ya da tek kullanımlık ürün olarak gözüküyor. Ama pipetin 13-14 çeşidi var. Bunların bütün çeşidini yapmak zor bir iş. 7-8 aşamadan geçtiği için zor bir iş. Genellikle biz bunu Türkiye de insanlar neden yapmıyor neden yatırım yapmıyor diye baktık ki zor bir iş olduğundan dolayı ve el emeği çok olan bir iş olduğu için insanlar buna yatırım yapmamış. Ama biz ambalaj sektöründe olduğumuz için yıllarca toptancılık yaptığımız için Türkiye\'yi çok iyi tanıyoruz. Türkiye\'ye hakim olduk ama ihracata da yeni yeni başladı. Şu an da pipetin ihracatını genellikle Avrupa değil de Türkiye Cumhuriyeti\'ne, Gürcistan\'a, Türkmenistan\'a, Azerbaycan\'a ve Irak\'a gönderiyoruz&amp;rdquo; dedi.&lt;/p&gt;\r\n&lt;p&gt;&lt;img src=\\&quot;/dosyalar/7.jpg\\&quot; width=\\&quot;1000\\&quot; height=\\&quot;567\\&quot; alt=\\&quot;\\&quot; /&gt;&lt;/p&gt;\r\n&lt;p&gt;&lt;img src=\\&quot;/dosyalar/4.jpg\\&quot; width=\\&quot;1000\\&quot; height=\\&quot;567\\&quot; alt=\\&quot;\\&quot; /&gt;&lt;/p&gt;\r\n&lt;p&gt;&lt;img src=\\&quot;/dosyalar/5.jpg\\&quot; width=\\&quot;1000\\&quot; height=\\&quot;567\\&quot; alt=\\&quot;\\&quot; /&gt;&lt;/p&gt;\r\n&lt;p&gt;&lt;img src=\\&quot;/dosyalar/6.jpg\\&quot; width=\\&quot;1000\\&quot; height=\\&quot;567\\&quot; alt=\\&quot;\\&quot; /&gt;&lt;/p&gt;\r\n&lt;p&gt;&lt;img src=\\&quot;/dosyalar/9.jpg\\&quot; width=\\&quot;1000\\&quot; height=\\&quot;567\\&quot; alt=\\&quot;\\&quot; /&gt;&lt;/p&gt;\r\n&lt;p&gt;&lt;img src=\\&quot;/dosyalar/10.jpg\\&quot; width=\\&quot;750\\&quot; height=\\&quot;750\\&quot; alt=\\&quot;\\&quot; /&gt;&lt;/p&gt;\r\n&lt;p&gt;&lt;img src=\\&quot;/dosyalar/11.jpg\\&quot; width=\\&quot;750\\&quot; height=\\&quot;750\\&quot; alt=\\&quot;\\&quot; /&gt;&lt;/p&gt;\r\n&lt;p&gt;&lt;img src=\\&quot;/dosyalar/12.jpg\\&quot; alt=\\&quot;\\&quot; /&gt;&lt;/p&gt;', '16 Ağustos 2019, Cuma', 'turkiye-nin-yuzde-70-ihtiyacini-elazig-karsiliyor8.jpg', 'tr');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `hizmetlerimiz`
+--
+
+CREATE TABLE `hizmetlerimiz` (
+  `id` int(9) UNSIGNED NOT NULL,
+  `no` text DEFAULT NULL,
+  `seo` text NOT NULL,
+  `meta` text NOT NULL,
+  `keyword` text NOT NULL,
+  `aciklama` text NOT NULL,
+  `tarih` text NOT NULL,
+  `resim` text NOT NULL,
+  `kategori` text NOT NULL,
+  `dil` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+
+--
+-- Tablo döküm verisi `hizmetlerimiz`
+--
+
+INSERT INTO `hizmetlerimiz` (`id`, `no`, `seo`, `meta`, `keyword`, `aciklama`, `tarih`, `resim`, `kategori`, `dil`) VALUES
+(13, 'Düz Kağıtlı Pipet', 'duz-kagitli-pipet', 'Düz Kağıtlı Pipet', 'Düz Kağıtlı Pipet', 'Genişlik: 5 - 6 mm<div>Uzunluk: 19 cm</div>', '23 Ocak 2019, Çarşamba', 'duz-kagitli-pipet87.jpg', 'pipetler', 'tr'),
+(12, 'Düz Pipet', 'duz-pipet', 'Düz Pipet', 'Düz Pipet', 'Genişlik: 6 mm<div>Uzunluk: 19 cm</div><div><br /></div>', '23 Ocak 2019, Çarşamba', 'duz-pipet96.jpg', 'pipetler', 'tr'),
+(14, 'Düz Jelatinli Pipet', 'duz-jelatinli-pipet', 'Düz Jelatinli Pipet', 'Düz Jelatinli Pipet', '', '23 Ocak 2019, Çarşamba', 'duz-jelatinli-pipet95.jpg', 'pipetler', 'tr'),
+(15, 'Frozen Düz Pipet', 'frozen-duz-pipet', 'Frozen Düz Pipet', 'Frozen Düz Pipet', 'Genişlik: 7 - 8 mm', '23 Ocak 2019, Çarşamba', 'frozen-duz-pipet22.jpg', 'pipetler', 'tr'),
+(16, 'Frozen Kağıtlı Pipet', 'frozen-kagitli-pipet', 'Frozen Kağıtlı Pipet', 'Frozen Kağıtlı Pipet', 'Genişlik: 8 mm', '23 Ocak 2019, Çarşamba', 'frozen-kagitli-pipet63.jpg', 'pipetler', 'tr'),
+(17, 'Frozen Körüklü Pipet', 'frozen-koruklu-pipet', 'Frozen Körüklü Pipet', 'Frozen Körüklü Pipet', 'Genişlik: 8 mm', '23 Ocak 2019, Çarşamba', 'frozen-koruklu-pipet9.jpg', 'pipetler', 'tr'),
+(18, 'Jelatinli Körüklü Frozen Pipet', 'jelatinli-koruklu-frozen-pipet', 'Jelatinli Körüklü Frozen Pipet', 'Jelatinli Körüklü Frozen Pipet', '', '23 Ocak 2019, Çarşamba', 'jelatinli-koruklu-frozen-pipet88.jpg', 'pipetler', 'tr'),
+(19, 'Kağıtlı Körüklü Frozen Pipet', 'kagitli-koruklu-frozen-pipet', 'Kağıtlı Körüklü Frozen Pipet', 'Kağıtlı Körüklü Frozen Pipet', '', '23 Ocak 2019, Çarşamba', 'kagitli-koruklu-frozen-pipet51.jpg', 'pipetler', 'tr'),
+(20, 'Körüklü Pipet', 'koruklu-pipet', 'Körüklü Pipet', 'Körüklü Pipet', 'Genişlik: 5 mm', '23 Ocak 2019, Çarşamba', 'koruklu-pipet48.jpg', 'pipetler', 'tr'),
+(21, 'Jelatinli Körüklü Pipet', 'jelatinli-koruklu-pipet', 'Jelatinli Körüklü Pipet', 'Jelatinli Körüklü Pipet', 'Genişlik: 5 mm', '23 Ocak 2019, Çarşamba', 'jelatinli-koruklu-pipet76.jpg', 'pipetler', 'tr'),
+(22, 'Artistik Pipet', 'artistik-pipet', 'Artistik Pipet', 'Artistik Pipet', '', '12 Şubat 2019, Salı', 'artistik-pipet16.jpg', 'pipetler', 'tr'),
+(23, 'Baskılı Pipet', 'baskili-pipet', 'Baskılı Pipet', 'Baskılı Pipet', 'Ürün boyutları istediğiniz ebatlarda üretilmektedir.', '11 Şubat 2019, Pazartesi', 'baskili-pipet13.jpg', 'ozel-uretim-pipet', 'tr'),
+(30, 'Straight Wrapped Paper Straw', 'straight-wrapped-paper-straw', 'Straight Wrapped Paper Straw', 'Straight Wrapped Paper Straw', 'Width: 5 - 6 mm<div>Height: 19 cm</div>', '12 Şubat 2019, Salı', 'duz-kagitli-pipet87.jpg', 'straw', 'en'),
+(31, 'Straight Straw', 'straight-straw', 'Straight Straw', 'Straight Straw', 'Width: 6 mm<div>Height: 19 cm</div><div><br /></div>', '12 Şubat 2019, Salı', 'duz-pipet96.jpg', 'straw', 'en'),
+(32, 'Straight Wrapped Gelatin Straw', 'straight-wrapped-gelatin-straw', 'Straight Wrapped Gelatin Straw', 'Straight Wrapped Gelatin Straw', '', '12 Şubat 2019, Salı', 'duz-jelatinli-pipet95.jpg', 'straw', 'en'),
+(33, 'Frozen Straight Straw', 'frozen-straight-straw', 'Frozen Straight Straw', 'Frozen Straight Straw', 'Width: 7 - 8 mm', '12 Şubat 2019, Salı', 'frozen-duz-pipet22.jpg', 'straw', 'en'),
+(34, 'Frozen Wrapped Paper Straw', 'frozen-wrapped-paper-straw', 'Frozen Wrapped Paper Straw', 'Frozen Wrapped Paper Straw', 'Width: 8 mm', '12 Şubat 2019, Salı', 'frozen-kagitli-pipet63.jpg', 'straw', 'en'),
+(35, 'Frozen Flexible Straw', 'frozen-flexible-straw', 'Frozen Flexible Straw', 'Frozen Flexible Straw', 'Width: 8 mm', '12 Şubat 2019, Salı', 'frozen-koruklu-pipet9.jpg', 'straw', 'en'),
+(36, 'Wrapped Gelatin  Flexible Frozen Straw', 'wrapped-gelatin-flexible-frozen-straw', 'Wrapped Gelatin  Flexible Frozen Straw', 'Wrapped Gelatin  Flexible Frozen Straw', '', '12 Şubat 2019, Salı', 'jelatinli-koruklu-frozen-pipet88.jpg', 'straw', 'en'),
+(37, 'Wrapped Paper  Flexible Frozen Straw', 'wrapped-paper-flexible-frozen-straw', 'Wrapped Paper  Flexible Frozen Straw', 'Wrapped Paper  Flexible Frozen Straw', '', '12 Şubat 2019, Salı', 'kagitli-koruklu-frozen-pipet51.jpg', 'straw', 'en'),
+(38, 'Flexible Straw', 'flexible-straw', 'Flexible Straw', 'Flexible Straw', 'Width: 5 mm', '12 Şubat 2019, Salı', 'koruklu-pipet48.jpg', 'straw', 'en'),
+(39, 'Wrapped Gelatin Flexible Straw', 'wrapped-gelatin-flexible-straw', 'Wrapped Gelatin Flexible Straw', 'Wrapped Gelatin Flexible Straw', 'Width: 5 mm', '12 Şubat 2019, Salı', 'jelatinli-koruklu-pipet76.jpg', 'straw', 'en'),
+(40, 'Artistic Straw', 'artistic-straw', 'Artistic Straw', 'Artistic Straw', '', '12 Şubat 2019, Salı', 'artistik-pipet16.jpg', 'straw', 'en'),
+(41, 'Special Production Straw', 'special-production-straw', 'Special Production Straw', 'Special Production Straw', 'Product sizes are produced in the sizes you want.', '13 Şubat 2019, Çarşamba', 'baskili-pipet13.jpg', 'special-production', 'en'),
+(42, 'Flache Papierpipette', 'flache-papierpipette', 'Flache Papierpipette', 'Flache Papierpipette', 'Breite: 5 - 6 mm<div>Länge: 19 cm</div>', '12 Şubat 2019, Salı', 'duz-kagitli-pipet87.jpg', 'pipette', 'de'),
+(43, 'Gerade Pipette', 'gerade-pipette', 'Gerade Pipette', 'Gerade Pipette', '<div style=\"\"><div style=\"\"><font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">Breite: 6 mm</span></font></div><div style=\"\"><font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">Länge: 19 cm</span></font></div></div>', '12 Şubat 2019, Salı', 'duz-pipet96.jpg', 'pipette', 'de'),
+(44, 'Gerade Gelatinepipette', 'gerade-gelatinepipette', 'Gerade Gelatinepipette', 'Gerade Gelatinepipette', '', '12 Şubat 2019, Salı', 'duz-jelatinli-pipet95.jpg', 'pipette', 'de'),
+(45, 'Gefrorene Gerade Pipette', 'gefrorene-gerade-pipette', 'Gefrorene Gerade Pipette', 'Gefrorene Gerade Pipette', 'Breite: 7 - 8 mm', '12 Şubat 2019, Salı', 'frozen-duz-pipet22.jpg', 'pipette', 'de'),
+(46, 'Gefrorene Papierpipette', 'gefrorene-papierpipette', 'Gefrorene Papierpipette', 'Gefrorene Papierpipette', 'Breite: 8 mm', '12 Şubat 2019, Salı', 'frozen-kagitli-pipet63.jpg', 'pipette', 'de'),
+(47, 'Gefrorene Balgenpipette', 'gefrorene-balgenpipette', 'Gefrorene Balgenpipette', 'Gefrorene Balgenpipette', 'Breite: 8 mm', '12 Şubat 2019, Salı', 'frozen-koruklu-pipet9.jpg', 'pipette', 'de'),
+(48, 'Gelatinebälge Gefrorene Pipette', 'gelatineb-lge-gefrorene-pipette', 'Gelatinebälge Gefrorene Pipette', 'Gelatinebälge Gefrorene Pipette', '', '12 Şubat 2019, Salı', 'jelatinli-koruklu-frozen-pipet88.jpg', 'pipette', 'de'),
+(49, 'Papierbälge Gefrorene Pipette', 'papierb-lge-gefrorene-pipette', 'Papierbälge Gefrorene Pipette', 'Papierbälge Gefrorene Pipette', '', '12 Şubat 2019, Salı', 'kagitli-koruklu-frozen-pipet51.jpg', 'pipette', 'de'),
+(50, 'Handliche Pipette', 'handliche-pipette', 'Handliche Pipette', 'Handliche Pipette', 'Breite: 5 mm', '12 Şubat 2019, Salı', 'koruklu-pipet48.jpg', 'pipette', 'de'),
+(51, 'Gelatine Faltenbalg Pipette', 'gelatine-faltenbalg-pipette', 'Gelatine Faltenbalg Pipette', 'Gelatine Faltenbalg Pipette', 'Breite: 5 mm', '12 Şubat 2019, Salı', 'jelatinli-koruklu-pipet76.jpg', 'pipette', 'de'),
+(52, 'Künstlerische Pipette', 'kunstlerische-pipette', 'Künstlerische Pipette', 'Künstlerische Pipette', '', '12 Şubat 2019, Salı', 'artistik-pipet16.jpg', 'pipette', 'de'),
+(53, 'Gedruckte Pipette', 'gedruckte-pipette', 'Gedruckte Pipette', 'Gedruckte Pipette', 'Produktgrößen werden in den gewünschten Größen produziert.', '12 Şubat 2019, Salı', 'baskili-pipet13.jpg', 'sonderanfertigung', 'de'),
+(54, 'Pipette de papier plat', 'pipette-de-papier-plat', 'Pipette de papier plat', 'Pipette de papier plat', 'Largeur: 5 - 6 mm<div>Longueur: 19 cm</div>', '12 Şubat 2019, Salı', 'duz-kagitli-pipet87.jpg', 'pipette', 'fr'),
+(55, 'Pipette droite', 'pipette-droite', 'Pipette droite', 'Pipette droite', 'Largeur: 6 mm<div>Longueur: 19 cm</div><div><br /></div>', '12 Şubat 2019, Salı', 'duz-pipet96.jpg', 'pipette', 'fr'),
+(56, 'Pipette Gélatine Droite', 'pipette-g-latine-droite', 'Pipette Gélatine Droite', 'Pipette Gélatine Droite', '', '12 Şubat 2019, Salı', 'duz-jelatinli-pipet95.jpg', 'pipette', 'fr'),
+(57, 'Pipette droite congelée', 'pipette-droite-congel-e', 'Pipette droite congelée', 'Pipette droite congelée', 'Largeur: 7 - 8 mm', '12 Şubat 2019, Salı', 'frozen-duz-pipet22.jpg', 'pipette', 'fr'),
+(58, 'Pipette de papier congelé', 'pipette-de-papier-congel', 'Pipette de papier congelé', 'Pipette de papier congelé', 'Largeur: 8 mm', '12 Şubat 2019, Salı', 'frozen-kagitli-pipet63.jpg', 'pipette', 'fr'),
+(59, 'Pipette à soufflets congelés', 'pipette-soufflets-congel-s', 'Pipette à soufflets congelés', 'Pipette à soufflets congelés', 'Largeur: 8 mm', '12 Şubat 2019, Salı', 'frozen-koruklu-pipet9.jpg', 'pipette', 'fr'),
+(60, 'Pipette congelée à soufflet de gélatine', 'pipette-congel-e-soufflet-de-g-latine', 'Pipette congelée à soufflet de gélatine', 'Pipette congelée à soufflet de gélatine', '', '12 Şubat 2019, Salı', 'jelatinli-koruklu-frozen-pipet88.jpg', 'pipette', 'fr'),
+(61, 'Pipette congelée à soufflet en papier', 'pipette-congel-e-soufflet-en-papier', 'Pipette congelée à soufflet en papier', 'Pipette congelée à soufflet en papier', '', '12 Şubat 2019, Salı', 'kagitli-koruklu-frozen-pipet51.jpg', 'pipette', 'fr'),
+(62, 'Pipette Pratique', 'pipette-pratique', 'Pipette Pratique', 'Pipette Pratique', 'Largeur: 5 mm', '12 Şubat 2019, Salı', 'koruklu-pipet48.jpg', 'pipette', 'fr'),
+(63, 'Pipette à Soufflet Gélatine', 'pipette-soufflet-g-latine', 'Pipette à Soufflet Gélatine', 'Pipette à Soufflet Gélatine', 'Largeur: 5 mm', '12 Şubat 2019, Salı', 'jelatinli-koruklu-pipet76.jpg', 'pipette', 'fr'),
+(64, 'Pipette Artistique', 'pipette-artistique', 'Pipette Artistique', 'Pipette Artistique', '', '12 Şubat 2019, Salı', 'artistik-pipet16.jpg', 'pipette', 'fr'),
+(65, 'Pipette imprimée', 'pipette-imprim-e', 'Pipette imprimée', 'Pipette imprimée', 'Les tailles de produits sont produites dans les tailles que vous souhaitez.', '12 Şubat 2019, Salı', 'baskili-pipet13.jpg', 'production-sur-mesure', 'fr'),
+(66, 'Плоская бумажная пипетка', 'ploskaya-bumazhnaya-pipetka', 'Плоская бумажная пипетка', 'Плоская бумажная пипетка', 'ширина: 5 - 6 mm<div>длина: 19 cm</div>', '12 Şubat 2019, Salı', 'duz-kagitli-pipet87.jpg', 'pipetka', 'ru'),
+(67, 'Прямая пипетка', 'pryamaya-pipetka', 'Прямая пипетка', 'Прямая пипетка', 'ширина: 6 mm<div>длина: 19 cm</div><div><br /></div>', '12 Şubat 2019, Salı', 'duz-pipet96.jpg', 'pipetka', 'ru'),
+(68, 'Прямая желатиновая пипетка', 'pryamaya-zhelatinovaya-pipetka', 'Прямая желатиновая пипетка', 'Прямая желатиновая пипетка', '', '12 Şubat 2019, Salı', 'duz-jelatinli-pipet95.jpg', 'pipetka', 'ru'),
+(69, 'Замороженная прямая пипетка', 'zamorozhennaya-pryamaya-pipetka', 'Замороженная прямая пипетка', 'Замороженная прямая пипетка', 'ширина: 7 - 8 mm', '12 Şubat 2019, Salı', 'frozen-duz-pipet22.jpg', 'pipetka', 'ru'),
+(70, 'Замороженная бумажная пипетка', 'zamorozhennaya-bumazhnaya-pipetka', 'Замороженная бумажная пипетка', 'Замороженная бумажная пипетка', 'ширина: 8 mm', '12 Şubat 2019, Salı', 'frozen-kagitli-pipet63.jpg', 'pipetka', 'ru'),
+(71, 'Пипетка с замороженными сильфонами', 'pipetka-s-zamorozhennymi-silfonami', 'Пипетка с замороженными сильфонами', 'Пипетка с замороженными сильфонами', 'ширина: 8 mm', '12 Şubat 2019, Salı', 'frozen-koruklu-pipet9.jpg', 'pipetka', 'ru'),
+(72, 'Желатиновый сильфон замороженная пипетка', 'zhelatinovyj-silfon-zamorozhennaya-pipetka', 'Желатиновый сильфон замороженная пипетка', 'Желатиновый сильфон замороженная пипетка', '', '12 Şubat 2019, Salı', 'jelatinli-koruklu-frozen-pipet88.jpg', 'pipetka', 'ru'),
+(73, 'Бумажные мехи замороженная пипетка', 'bumazhnye-mehi-zamorozhennaya-pipetka', 'Бумажные мехи замороженная пипетка', 'Бумажные мехи замороженная пипетка', '', '12 Şubat 2019, Salı', 'kagitli-koruklu-frozen-pipet51.jpg', 'pipetka', 'ru'),
+(74, 'Удобная пипетка', 'udobnaya-pipetka', 'Удобная пипетка', 'Удобная пипетка', 'ширина: 5 mm', '12 Şubat 2019, Salı', 'koruklu-pipet48.jpg', 'pipetka', 'ru'),
+(75, 'Желатиновая сильфонная пипетка', 'zhelatinovaya-silfonnaya-pipetka', 'Желатиновая сильфонная пипетка', 'Желатиновая сильфонная пипетка', 'ширина: 5 mm', '12 Şubat 2019, Salı', 'jelatinli-koruklu-pipet76.jpg', 'pipetka', 'ru'),
+(76, 'Художественная Пипетка', 'hudozhestvennaya-pipetka', 'Художественная Пипетка', 'Художественная Пипетка', '', '12 Şubat 2019, Salı', 'artistik-pipet16.jpg', 'pipetka', 'ru'),
+(77, 'Пипетка с принтом', 'pipetka-s-printom', 'Пипетка с принтом', 'Пипетка с принтом', 'Размеры продукта производятся в нужных вам размерах.', '12 Şubat 2019, Salı', 'baskili-pipet13.jpg', 'إنتاج-خاص', 'ru'),
+(78, 'Pipeta de papel plano', 'pipeta-de-papel-plano', 'Pipeta de papel plano', 'Pipeta de papel plano', 'Ancho: 5 - 6 mm<div>Longitud: 19 cm</div>', '12 Şubat 2019, Salı', 'duz-kagitli-pipet87.jpg', 'pipeta', 'sp'),
+(79, 'Pipeta recta', 'pipeta-recta', 'Pipeta recta', 'Pipeta recta', 'Ancho: 6 mm<div>Longitud: 19 cm</div><div><br /></div>', '12 Şubat 2019, Salı', 'duz-pipet96.jpg', 'pipeta', 'sp'),
+(80, 'Pipeta de gelatina recta', 'pipeta-de-gelatina-recta', 'Pipeta de gelatina recta', 'Pipeta de gelatina recta', '', '12 Şubat 2019, Salı', 'duz-jelatinli-pipet95.jpg', 'pipeta', 'sp'),
+(81, 'Pipeta recta congelada', 'pipeta-recta-congelada', 'Pipeta recta congelada', 'Pipeta recta congelada', 'Ancho: 7 - 8 mm', '12 Şubat 2019, Salı', 'frozen-duz-pipet22.jpg', 'pipeta', 'sp'),
+(82, 'Pipeta de papel congelado', 'pipeta-de-papel-congelado', 'Pipeta de papel congelado', 'Pipeta de papel congelado', 'Ancho: 8 mm', '12 Şubat 2019, Salı', 'frozen-kagitli-pipet63.jpg', 'pipeta', 'sp'),
+(83, 'Pipeta de fuelle congelado', 'pipeta-de-fuelle-congelado', 'Pipeta de fuelle congelado', 'Pipeta de fuelle congelado', 'Ancho: 8 mm', '12 Şubat 2019, Salı', 'frozen-koruklu-pipet9.jpg', 'pipeta', 'sp'),
+(84, 'Pipeta congelada de gelatina de fuelle', 'pipeta-congelada-de-gelatina-de-fuelle', 'Pipeta congelada de gelatina de fuelle', 'Pipeta congelada de gelatina de fuelle', '', '12 Şubat 2019, Salı', 'jelatinli-koruklu-frozen-pipet88.jpg', 'pipeta', 'sp'),
+(85, 'Pipeta de papel fuelle congelado', 'pipeta-de-papel-fuelle-congelado', 'Pipeta de papel fuelle congelado', 'Pipeta de papel fuelle congelado', '', '12 Şubat 2019, Salı', 'kagitli-koruklu-frozen-pipet51.jpg', 'pipeta', 'sp'),
+(86, 'Pipeta de mano', 'pipeta-de-mano', 'Pipeta de mano', 'Pipeta de mano', 'Ancho: 5 mm', '12 Şubat 2019, Salı', 'koruklu-pipet48.jpg', 'pipeta', 'sp'),
+(87, 'Pipeta de fuelle de gelatina', 'pipeta-de-fuelle-de-gelatina', 'Pipeta de fuelle de gelatina', 'Pipeta de fuelle de gelatina', 'Ancho: 5 mm', '12 Şubat 2019, Salı', 'jelatinli-koruklu-pipet76.jpg', 'pipeta', 'sp'),
+(88, 'Pipeta Artística', 'pipeta-art-stica', 'Pipeta Artística', 'Pipeta Artística', '', '12 Şubat 2019, Salı', 'artistik-pipet16.jpg', 'pipeta', 'sp'),
+(89, 'Pipeta impresa', 'pipeta-impresa', 'Pipeta impresa', 'Pipeta impresa', 'Los tamaños de los productos se producen en los tamaños que desee.', '12 Şubat 2019, Salı', 'baskili-pipet13.jpg', 'producci-n-personalizada', 'sp'),
+(90, 'ورقة مسطحة ماصة', 'ورقة-مسطحة-ماصة', 'ورقة مسطحة ماصة', 'ورقة مسطحة ماصة', 'عرض: 5 - 6 mm<div>طول: 19 cm</div>', '12 Şubat 2019, Salı', 'duz-kagitli-pipet87.jpg', 'ماصة', 'ar'),
+(91, 'مستقيم ماصة', 'مستقيم-ماصة', 'مستقيم ماصة', 'مستقيم ماصة', 'عرض: 6 mm<div>طول: 19 cm</div><div><br /></div>', '12 Şubat 2019, Salı', 'duz-pipet96.jpg', 'ماصة', 'ar'),
+(92, 'الجيلاتين مستقيم ماصة', 'الجيلاتين-مستقيم-ماصة', 'الجيلاتين مستقيم ماصة', 'الجيلاتين مستقيم ماصة', '', '12 Şubat 2019, Salı', 'duz-jelatinli-pipet95.jpg', 'ماصة', 'ar'),
+(93, 'ماصة مجمدة مستقيمة', 'ماصة-مجمدة-مستقيمة', 'ماصة مجمدة مستقيمة', 'ماصة مجمدة مستقيمة', 'عرض: 7 - 8 mm', '12 Şubat 2019, Salı', 'frozen-duz-pipet22.jpg', 'ماصة', 'ar'),
+(94, 'مجمد ورق مجمد', 'مجمد-ورق-مجمد', 'مجمد ورق مجمد', 'مجمد ورق مجمد', 'عرض: 8 mm', '12 Şubat 2019, Salı', 'frozen-kagitli-pipet63.jpg', 'ماصة', 'ar'),
+(95, 'خرطوم المجمدة ماصة', 'خرطوم-المجمدة-ماصة', 'خرطوم المجمدة ماصة', 'خرطوم المجمدة ماصة', 'عرض: 8 mm', '12 Şubat 2019, Salı', 'frozen-koruklu-pipet9.jpg', 'ماصة', 'ar'),
+(96, 'الجيلاتين الخوار المجمدة الماصة', 'الجيلاتين-الخوار-المجمدة-الماصة', 'الجيلاتين الخوار المجمدة الماصة', 'الجيلاتين الخوار المجمدة الماصة', '', '12 Şubat 2019, Salı', 'jelatinli-koruklu-frozen-pipet88.jpg', 'ماصة', 'ar'),
+(97, 'المناديل الورقية المجوفة المجمدة', 'المناديل-الورقية-المجوفة-المجمدة', 'المناديل الورقية المجوفة المجمدة', 'المناديل الورقية المجوفة المجمدة', '', '12 Şubat 2019, Salı', 'kagitli-koruklu-frozen-pipet51.jpg', 'ماصة', 'ar'),
+(98, 'مفيد ماصة', 'مفيد-ماصة', 'مفيد ماصة', 'مفيد ماصة', 'عرض: 5 mm', '12 Şubat 2019, Salı', 'koruklu-pipet48.jpg', 'ماصة', 'ar'),
+(99, 'الجيلاتين الخوار الماصة', 'الجيلاتين-الخوار-الماصة', 'الجيلاتين الخوار الماصة', 'الجيلاتين الخوار الماصة', 'عرض: 5 mm', '12 Şubat 2019, Salı', 'jelatinli-koruklu-pipet76.jpg', 'ماصة', 'ar'),
+(100, 'ماصة فنية', 'ماصة-فنية', 'ماصة فنية', 'ماصة فنية', '', '12 Şubat 2019, Salı', 'artistik-pipet16.jpg', 'ماصة', 'ar'),
+(101, 'ماصة مطبوعة', 'ماصة-مطبوعة', 'ماصة مطبوعة', 'ماصة مطبوعة', 'يتم إنتاج أحجام المنتج بالأحجام التي تريدها.', '12 Şubat 2019, Salı', 'baskili-pipet13.jpg', 'إنتاج-خاص', 'ar');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `referanslar`
+--
+
+CREATE TABLE `referanslar` (
+  `id` int(9) UNSIGNED NOT NULL,
+  `no` text DEFAULT NULL,
+  `seo` text NOT NULL,
+  `meta` text NOT NULL,
+  `keyword` text NOT NULL,
+  `aciklama` text NOT NULL,
+  `tarih` text NOT NULL,
+  `resim` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+
+--
+-- Tablo döküm verisi `referanslar`
+--
+
+INSERT INTO `referanslar` (`id`, `no`, `seo`, `meta`, `keyword`, `aciklama`, `tarih`, `resim`) VALUES
+(1, 'das', 'das', 'dasd', 'asdasd', '', '26 Nisan 2018, Perşembe', 'resimyok.png');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `sayfa`
+--
+
+CREATE TABLE `sayfa` (
+  `id` int(9) UNSIGNED NOT NULL,
+  `no` text DEFAULT NULL,
+  `seo` text NOT NULL,
+  `meta` text NOT NULL,
+  `keyword` text NOT NULL,
+  `aciklama` text NOT NULL,
+  `tarih` text NOT NULL,
+  `resim` text NOT NULL,
+  `dil` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+
+--
+-- Tablo döküm verisi `sayfa`
+--
+
+INSERT INTO `sayfa` (`id`, `no`, `seo`, `meta`, `keyword`, `aciklama`, `tarih`, `resim`, `dil`) VALUES
+(80, 'Hakkımızda', 'hakkimizda', 'Hakkımızda', 'Hakkımızda', 'Bona Pipet, Soyplas Ambalaj Şirketi’nin Türkiye’de pipet üretim faaliyetindeki seçili markalarından biridir. Soyplas 2013 yılında Elazığ Organize Sanayi Bölgesinde kurulmuştur. 24.000 m2 üzerinde 17.000 m2 kapalı alanda dünyanın en son yüksek teknoloji makinalarında üretim yapılmaktadır. Genellikle üretilen ürünlerimizi Avrupa başta olmak üzere dünyaya ihraç etmekteyiz.<div><br /></div><div>Müşterilerimizin artan taleplerine zamanında yanıt verebilmek için yatırımlarımız hızla devam etmekte olup kapasite ve pazar payımız her geçen gün artmaktadır.</div>', '23 Aralık 2020, Çarşamba', 'resimyok.png', 'tr'),
+(85, 'Vizyonumuz', 'vizyonumuz', 'Vizyonumuz', 'Vizyonumuz', 'Çağın ihtiyaçlarına cevap veren inovatif ürün çeşitliliğini geliştirmek,ileri teknoloji sistemlerinin kullanıldığı üretim kapasitesi ile birlikte global pazardaki payını önemli  ölçüde arttırarak ülke ekonomisine katkıda bulunmak.', '11 Şubat 2019, Pazartesi', 'resimyok.png', 'tr'),
+(83, 'Misyonumuz', 'misyonumuz', 'Misyonumuz', 'Misyonumuz', 'Müşteri memnuniyetinin ön planda  tutulduğu, insana ve doğaya  saygı anlayışıyla üretilen kaliteli ve hijyenik ürünlerini, yurt içi ve yurt dışı pazarında söz sahibi konumuna taşımak.', '11 Şubat 2019, Pazartesi', 'resimyok.png', 'tr'),
+(87, 'About Us', 'about-us', 'About Us', 'About Us', 'Bonapipet is a brand of Soyplas Packing Company in the straw manufacturing in Turkey.\r\nOur company was founded in Elazığ Organized Industrial Zone in 2013. Our company is carrying out activities in 17.000 m2 indoor area over 24.000m2 land with state of the art high tech machinery.<div><br /></div><div>We usually export our products throughout the world but primarily to the European countries.\r\n\r\nOur high strength straws with long durability are preferred by the entire world. We continue our investments full speed in order to meet increasing demands of our customers and thus increase our market share.\r\n</div>', '23 Aralık 2020, Çarşamba', 'resimyok.png', 'en'),
+(88, 'Mission', 'mission', 'Mission', 'Mission', 'Maximize the customer satisfaction;<div>High quality and hygienic product;</div><div>Dominate the global market\r\n</div>', '12 Şubat 2019, Salı', 'resimyok.png', 'en'),
+(89, 'Vision', 'vision', 'Vision', 'Vision', 'Innovative Product Development;<div>Increase  the production  capacity with  advanced  technology system;</div><div>Increase one’s global market share\r\n</div>', '12 Şubat 2019, Salı', 'resimyok.png', 'en'),
+(90, 'über uns', 'uber-uns', 'über uns', 'über uns', '<font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">Bona Pipette, Soyplas Türkiye\'depipet faaliyetindekiseçil Herstellung von Verpackungen Unternehmen ist einer der Marke. Soyplas wurde 2013 in Elazığ Organized Industrial Zone gegründet. Die Produktion erfolgt auf deutschen Maschinen, die die neueste Technologie der Welt sind, auf einer geschlossenen Fläche von 17.000 m2 auf 24.000 m2. Im Allgemeinen exportieren wir unsere Produkte in die Welt, insbesondere nach Europa.</span></font><div><font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\"><br /></span></font></div><div><font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">Unsere langlebigen und langlebigen Produkte der Ballen-, Schattierungs-, Palettennetz- und Pipettengruppe werden auf der ganzen Welt bevorzugt. Um rechtzeitig auf die steigenden Anforderungen unserer Kunden reagieren zu können, werden unsere Investitionen rasch fortgesetzt und unsere Kapazität und unser Marktanteil nehmen von Tag zu Tag zu.</span></font></div>', '23 Aralık 2020, Çarşamba', 'resimyok.png', 'de'),
+(91, 'Mission', 'mission-de', 'Mission', 'Mission', '<font face=\"Calibri, sans-serif\">Die qualitativ hochwertigen und hygienischen Produkte, die in Bezug auf Mensch und Natur hergestellt werden, an die Spitze der in- und ausländischen Märkte bringen.</font>', '12 Şubat 2019, Salı', 'resimyok.png', 'de'),
+(92, 'Vision', 'vision-de', 'Vision', 'Vision', '<font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">Zur Volkswirtschaft beizutragen, indem der Anteil des Weltmarktes durch die Produktionskapazität mit fortschrittlichen Technologiesystemen deutlich erhöht wird.</span></font>', '12 Şubat 2019, Salı', 'resimyok.png', 'de'),
+(93, 'A propos de nous', 'a-propos-de-nous', 'A propos de nous', 'A propos de nous', '<font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">Pipettes Bona, Soyplas de pipette sélectionnés dans les activités de production de l\'entreprise d\'emballage en Turquie est l\'un de la marque. Soyplas a été créée en 2013 dans la zone industrielle organisée d\'Elazığ. La production est réalisée sur des machines allemandes de dernière technologie au monde dans une zone fermée de 17.000 m2 sur 24.000 m2.</span></font><div><font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\"><br /></span></font></div><div><font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">De manière générale, nous exportons nos produits vers le monde, notamment vers l’Europe. Nos produits durables et durables dans les balles, les ombrages, les filets de palettes et le groupe Pipet sont préférés dans le monde entier. Afin de répondre aux demandes croissantes de nos clients dans les meilleurs délais, nos investissements se poursuivent rapidement et notre capacité et notre part de marché augmentent de jour en jour.</span></font></div>', '23 Aralık 2020, Çarşamba', 'resimyok.png', 'fr'),
+(94, 'Mission', 'mission-fr', 'Mission', 'Mission', '<font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">Mettre les produits de haute qualité et hygiéniques, produits dans le respect de l’humanité et de la nature, au premier plan des marchés nationaux et étrangers.</span></font>', '12 Şubat 2019, Salı', 'resimyok.png', 'fr'),
+(95, 'Vision', 'vision-fr', 'Vision', 'Vision', '<font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">Contribuer à l\'économie nationale en augmentant de manière significative la part du marché mondial avec la capacité de production utilisant des systèmes technologiques avancés.</span></font>', '12 Şubat 2019, Salı', 'resimyok.png', 'fr'),
+(96, 'о нас', 'o-nas', 'о нас', 'о нас', '<font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">Bona пипетки, дозаторы Soyplas, выбранные в производственной деятельности упаковочной компании в Турции является одним из бренда. Компания Soyplas была основана в 2013 году в Организованной промышленной зоне Elazığ. Производство осуществляется на немецких станках, которые являются новейшими технологиями в мире на закрытой площади 17.000 м2 на 24.000 м2. Как правило, мы экспортируем нашу продукцию в мире, особенно в Европу. Наши продукты в группе Bale, Shading, Pallet Nets и Pipet Group, которые долговечны и долговечны, предпочитаются во всем мире. Чтобы своевременно реагировать на растущие потребности наших клиентов, наши инвестиции быстро растут, а наша емкость и доля рынка растут день ото дня.</span></font>', '23 Aralık 2020, Çarşamba', 'resimyok.png', 'ru'),
+(97, 'миссия', 'missiya', 'миссия', 'миссия', '<font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">Чтобы вывести высококачественные и гигиенические продукты, которые производятся с учетом человечности и природы, в авангарде отечественного и зарубежного рынков.</span></font>', '12 Şubat 2019, Salı', 'resimyok.png', 'ru'),
+(98, 'видение', 'videnie', 'видение', 'видение', '<font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">Внести свой вклад в национальную экономику, значительно увеличив долю мирового рынка с производственными мощностями с использованием передовых технологических систем.</span></font>', '12 Şubat 2019, Salı', 'resimyok.png', 'ru'),
+(99, 'Sobre Nosotros', 'sobre-nosotros', 'Sobre Nosotros', 'Sobre Nosotros', '<font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">Bona pipetas, pipetas Soyplas seleccionados en las actividades de producción de la empresa de embalaje en Turquía es uno de la marca. Soyplas se estableció en 2013 en la Zona Industrial Organizada de Elazığ. La producción se lleva a cabo en máquinas alemanas que son la última tecnología del mundo en un área cerrada de 6000 m2 en 24000m2. En general, exportamos nuestros productos al mundo, especialmente a Europa.</span></font><div><font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\"><br /></span></font></div><div><font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">Nuestros productos en Bale, Shading, Pallet Nets y Pipet Group, que son duraderos y duraderos, son los preferidos en todo el mundo. Para responder a las crecientes demandas de nuestros clientes de manera oportuna, nuestras inversiones continúan rápidamente y nuestra capacidad y participación de mercado aumentan día a día.</span></font></div>', '12 Şubat 2019, Salı', 'resimyok.png', 'sp'),
+(100, 'Misión', 'mision-sp', 'Misión', 'Misión', '<font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">Llevar los productos de alta calidad e higiénicos, que se producen con respecto a la humanidad y la naturaleza, a la vanguardia de los mercados nacionales y extranjeros.</span></font>', '12 Şubat 2019, Salı', 'resimyok.png', 'sp'),
+(101, 'Visión', 'vision-sp', 'Visión', 'Visión', '<font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">Contribuir a la economía nacional aumentando significativamente la participación del mercado global con la capacidad de producción utilizando sistemas de tecnología avanzada.</span></font>', '12 Şubat 2019, Salı', 'resimyok.png', 'sp'),
+(102, 'حول بنا', 'حول-بنا', 'حول بنا', 'حول بنا', '<font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">الماصات النية، Soyplas ماصة مختارة في الأنشطة الإنتاجية للشركة التعبئة والتغليف في تركيا هي واحدة من العلامات التجارية. تأسست Soyplas في عام 2013 في منطقة Elazığ الصناعية المنظمة. يتم الإنتاج على الآلات الألمانية التي تعد أحدث التقنيات في العالم في مساحة مغلقة تبلغ 6000 م 2 على مساحة 24000 م 2. بشكل عام ، نقوم بتصدير منتجاتنا إلى العالم ، وخاصة إلى أوروبا. منتجاتنا في Bale ، Shading ، Pallet Nets و Pipet Group التي هي دائمة وطويلة الأمد مفضلة في جميع أنحاء العالم. من أجل الاستجابة للمطالب المتزايدة لعملائنا في الوقت المناسب ، تستمر استثماراتنا بشكل سريع وتتزايد قدرتنا وحصتنا في السوق يوما بعد يوم.</span></font>', '12 Şubat 2019, Salı', 'resimyok.png', 'ar'),
+(103, 'مهمة', 'مهمة', 'مهمة', 'مهمة', '<font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">لتقديم منتجات عالية الجودة وصحية ، والتي يتم إنتاجها فيما يتعلق بالإنسانية والطبيعة ، في طليعة الأسواق المحلية والأجنبية.</span></font>', '12 Şubat 2019, Salı', 'resimyok.png', 'ar'),
+(104, 'رؤية', 'رؤية', 'رؤية', 'رؤية', '<font face=\"Arial, Verdana\"><span style=\"font-size: 12px;\">للمساهمة في الاقتصاد الوطني من خلال زيادة كبيرة في حصة السوق العالمية مع القدرة الإنتاجية باستخدام أنظمة التكنولوجيا المتقدمة.</span></font>', '12 Şubat 2019, Salı', 'resimyok.png', 'ar');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `sayfalar`
+--
+
+CREATE TABLE `sayfalar` (
+  `id` int(9) UNSIGNED NOT NULL,
+  `no` text DEFAULT NULL,
+  `seo` text NOT NULL,
+  `meta` text NOT NULL,
+  `keyword` text NOT NULL,
+  `aciklama` text NOT NULL,
+  `tarih` text NOT NULL,
+  `resim` text NOT NULL,
+  `dil` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+
+--
+-- Tablo döküm verisi `sayfalar`
+--
+
+INSERT INTO `sayfalar` (`id`, `no`, `seo`, `meta`, `keyword`, `aciklama`, `tarih`, `resim`, `dil`) VALUES
+(93, 'Referanslarımız', 'referanslarimiz', '', '', 'Referanslarımız', '15 Nisan 2015, Çarşamba', 'resimyok.png', ''),
+(94, 'Tecde Life2', 'tecde-life2', 'asdasd2', 'wwww2', 'asdasd2', '19 Nisan 2015, Pazar', 'tecde-life701693952.jpg', '');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `smtp`
+--
+
+CREATE TABLE `smtp` (
+  `id` int(9) UNSIGNED NOT NULL,
+  `gelen` text DEFAULT NULL,
+  `giden` text NOT NULL,
+  `kullaniciadi` text NOT NULL,
+  `sifre` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin5 COLLATE=latin5_turkish_ci;
+
+--
+-- Tablo döküm verisi `smtp`
+--
+
+INSERT INTO `smtp` (`id`, `gelen`, `giden`, `kullaniciadi`, `sifre`) VALUES
+(1, 'mail.rehbermalatya.com', 'mail.rehbermalatya.com', 'info@rehbermalatya.com', 'assa');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `sosyal`
+--
+
+CREATE TABLE `sosyal` (
+  `id` int(9) UNSIGNED NOT NULL,
+  `no` text DEFAULT NULL,
+  `seo` text NOT NULL,
+  `keyword` text NOT NULL,
+  `meta` text NOT NULL,
+  `aciklama` text NOT NULL,
+  `tarih` text NOT NULL,
+  `resim` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `urun`
+--
+
+CREATE TABLE `urun` (
+  `id` int(9) UNSIGNED NOT NULL,
+  `urunadi` text DEFAULT NULL,
+  `seo` text NOT NULL,
+  `aciklama` text NOT NULL,
+  `tarih` text CHARACTER SET latin5 COLLATE latin5_turkish_ci NOT NULL,
+  `resimbuyuk` text CHARACTER SET latin5 COLLATE latin5_turkish_ci NOT NULL,
+  `resimkucuk` varchar(100) CHARACTER SET latin5 COLLATE latin5_turkish_ci NOT NULL,
+  `kod` varchar(250) NOT NULL,
+  `sira` text CHARACTER SET latin5 COLLATE latin5_turkish_ci NOT NULL,
+  `renk` text CHARACTER SET latin5 COLLATE latin5_turkish_ci NOT NULL,
+  `dil` text CHARACTER SET latin5 COLLATE latin5_turkish_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_turkish_ci;
+
+--
+-- Tablo döküm verisi `urun`
+--
+
+INSERT INTO `urun` (`id`, `urunadi`, `seo`, `aciklama`, `tarih`, `resimbuyuk`, `resimkucuk`, `kod`, `sira`, `renk`, `dil`) VALUES
+(5, 'Bona Pipet', 'bona-pipet', '', '7 Ocak 2019, Pazartesi', 'bona-pipet1546859965.jpg', 'bona-pipet15468599652_kucuk.jpg', 'Bona Pipet; gıda, ambalaj, fastfood ve içecek firmalarının taleplerine uygun doğru çözümler üretmektedir.', '1', '#000000', 'tr'),
+(6, 'Bona Pipet', 'bona-pipet', '', '7 Ocak 2019, Pazartesi', 'bona-pipet1546860020.jpg', 'bona-pipet15468600202_kucuk.jpg', 'Pipet grubumuz, geniş bir ürün yelpazesi ve gıdaya uygun üretimimiz sayesinde güvenle kullanabileceğiniz ürünlerdir.', '2', '#000000', 'tr'),
+(8, 'Bona Pipet', 'bona-pipet', '', '11 Şubat 2019, Pazartesi', 'bona-pipet1549894134.jpg', 'bona-pipet15498941342_kucuk.jpg', 'Bona Pipet, Soyplas Ambalaj Şirketinin Türkiyede pipet üretim faaliyetindeki seçili markalarından biridir.', '4', '#000000', 'tr'),
+(9, 'Bona Pipette', 'bona-pipette', '', '12 Şubat 2019, Salı', 'bona-pipette1549982356.jpg', 'bona-pipette15499823562_kucuk.jpg', 'Bona Pipet; food, packaging, fast food and beverage companies are producing the right solutions according to the demands.', '1', '#000000', 'en'),
+(10, 'Bona Pipette', 'bona-pipette', '', '12 Şubat 2019, Salı', 'bona-pipette1549982431.jpg', 'bona-pipette15499824312_kucuk.jpg', 'Our pipette group is a product that can be used safely with our wide product range and food-friendly production.', '2', '#000000', 'en'),
+(11, 'Bona Pipette', 'bona-pipette', '', '12 Şubat 2019, Salı', 'bona-pipette1549982506.jpg', 'bona-pipette15499825062_kucuk.jpg', 'Bona Pipette, Soyplas Packaging Company is one of the selected brands of the pipette production activities in Turkey.', '3', '#000000', 'en'),
+(12, 'Bona Pipette', 'bona-pipette', '', '12 Şubat 2019, Salı', 'bona-pipette1549982642.jpg', 'bona-pipette15499826422_kucuk.jpg', 'Bona-Pipette; Lebensmittel-, Verpackungs, Fast Food- und Getränkefirmen produzieren entsprechend den Anforderungen die richtigen Lösungen.', '5', '#000000', 'de'),
+(13, 'Bona Pipette', 'bona-pipette', '', '12 Şubat 2019, Salı', 'bona-pipette1549982692.jpg', 'bona-pipette15499826922_kucuk.jpg', 'Unsere Pipettengruppe ist ein Produkt, das mit unserer breiten Produktpalette und lebensmittelgerechten Produktion sicher verwendet werden kann.', '9', '#000000', 'de'),
+(14, 'Bona Pipette', 'bona-pipette', '', '12 Şubat 2019, Salı', 'bona-pipette1549982767.jpg', 'bona-pipette15499827672_kucuk.jpg', 'Bona Pipette, Soyplas Packaging  Company ist einer der ausgewählten Marken der Pipette Produktionsaktivitäten  in der Türkei.', '23', '#000000', 'de'),
+(15, 'Bona Pipette', 'bona-pipette', '', '12 Şubat 2019, Salı', 'bona-pipette1549982819.jpg', 'bona-pipette15499828192_kucuk.jpg', 'Bona Pipet; Les entreprises du secteur de l’alimentation, de l’emballage, de la restauration rapide et des boissons proposent les solutions adaptées à leurs besoins.', '1', '#000000', 'fr'),
+(16, 'Bona Pipette', 'bona-pipette', '', '12 Şubat 2019, Salı', 'bona-pipette1549982847.jpg', 'bona-pipette15499828472_kucuk.jpg', 'Notre groupe de pipettes est un produit qui peut être utilisé en toute sécurité avec notre vaste gamme de produits et notre production adaptée aux aliments.', '2', '#000000', 'fr'),
+(17, 'Bona Pipette', 'bona-pipette', '', '12 Şubat 2019, Salı', 'bona-pipette1549982875.jpg', 'bona-pipette15499828752_kucuk.jpg', 'Bona Pipette, Soyplas Packaging Company est l\'une des marques choisies des activités de production de pipette en Turquie.', '3', '#000000', 'fr'),
+(18, 'Bona пипетка', 'bona', '', '12 Şubat 2019, Salı', 'bona1549982919.jpg', 'bona15499829192_kucuk.jpg', 'Бона Пипет; Производители продуктов питания, упаковки, фастфуда и напитков разрабатывают правильные решения в соответствии с требованиями.', '1', '#000000', 'ru'),
+(19, 'Bona пипетка', 'bona', '', '12 Şubat 2019, Salı', 'bona1549983153.jpg', 'bona15499831532_kucuk.jpg', 'Наша группа пипеток - это продукт, который можно безопасно использовать с широким ассортиментом и безвредным для пищевых продуктов производством.', '2', '#000000', 'ru'),
+(20, 'Bona пипетка', 'bona', '', '12 Şubat 2019, Salı', 'bona1549983180.jpg', 'bona15499831802_kucuk.jpg', 'Bona Пипетка, Soyplas Packaging Company является одним из выбранных марок производства пипетки деятельности в Турции.', '3', '#000000', 'ru'),
+(21, 'Bona Pipeta', 'bona-pipeta', '', '12 Şubat 2019, Salı', 'bona-pipeta1549983298.jpg', 'bona-pipeta15499832982_kucuk.jpg', 'Bona Pipet; Las compañías de alimentos, empaques, comidas rápidas y bebidas están produciendo las soluciones adecuadas de acuerdo con las demandas.', '1', '#000000', 'sp'),
+(22, 'Bona Pipeta', 'bona-pipeta', '', '12 Şubat 2019, Salı', 'bona-pipeta1549983342.jpg', 'bona-pipeta15499833422_kucuk.jpg', 'Nuestro grupo de pipetas es un producto que se puede usar de manera segura con nuestra amplia gama de productos y producción apta para alimentos.', '2', '#000000', 'sp'),
+(23, 'Bona Pipeta', 'bona-pipeta', '', '12 Şubat 2019, Salı', 'bona-pipeta1549983371.jpg', 'bona-pipeta15499833712_kucuk.jpg', 'Bona pipeta, Soyplas Packaging Company es una de las marcas seleccionadas de las actividades de producción de la pipeta en Turquía.', '3', '#000000', 'sp'),
+(24, 'Bona ماصة', 'bona', '', '12 Şubat 2019, Salı', 'bona1549983413.jpg', 'bona15499834132_kucuk.jpg', 'بونا بيبيت شركات الأغذية والتعبئة والتغليف ، وشركات المأكولات السريعة والمشروبات تنتج الحلول الصحيحة وفقا للمتطلبات.', '1', '#000000', 'ar'),
+(25, 'Bona ماصة', 'bona', '', '12 Şubat 2019, Salı', 'bona1549983465.jpg', 'bona15499834652_kucuk.jpg', 'لدينا مجموعة ماصة هي المنتج الذي يمكن استخدامه بأمان مع مجموعة منتجاتنا واسعة وإنتاج الأغذية الصديقة.', '2', '#000000', 'ar'),
+(26, 'Bona ماصة', 'bona', '', '12 Şubat 2019, Salı', 'bona1549983506.jpg', 'bona15499835062_kucuk.jpg', 'حسن ماصة، شركة العبوات Soyplas هي واحدة من العلامات التجارية مختارة من أنشطة الإنتاج ماصة في تركيا.', '3', '#000000', 'ar');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `videolar`
+--
+
+CREATE TABLE `videolar` (
+  `id` int(9) UNSIGNED NOT NULL,
+  `youtubeid` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin5 COLLATE=latin5_turkish_ci;
+
+--
+-- Tablo döküm verisi `videolar`
+--
+
+INSERT INTO `videolar` (`id`, `youtubeid`) VALUES
+(23, '17sLHE_r884');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `yonetici`
+--
+
+CREATE TABLE `yonetici` (
+  `adminkodu` int(11) NOT NULL,
+  `admin_adi` varchar(15) NOT NULL DEFAULT '',
+  `admin_sifresi` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin5 COLLATE=latin5_turkish_ci;
+
+--
+-- Tablo döküm verisi `yonetici`
+--
+
+INSERT INTO `yonetici` (`adminkodu`, `admin_adi`, `admin_sifresi`) VALUES
+(1, 'admin', '25610fefee56f3d3f51b15c81bce4214f2fae9ce');
+
+--
+-- Dökümü yapılmış tablolar için indeksler
+--
+
+--
+-- Tablo için indeksler `altsayfa`
+--
+ALTER TABLE `altsayfa`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `ayarlar`
+--
+ALTER TABLE `ayarlar`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `counter_ips`
+--
+ALTER TABLE `counter_ips`
+  ADD UNIQUE KEY `ip` (`ip`);
+
+--
+-- Tablo için indeksler `counter_values`
+--
+ALTER TABLE `counter_values`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `degerler`
+--
+ALTER TABLE `degerler`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `fotokategori`
+--
+ALTER TABLE `fotokategori`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `fotolar`
+--
+ALTER TABLE `fotolar`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `haber`
+--
+ALTER TABLE `haber`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `hizmetlerimiz`
+--
+ALTER TABLE `hizmetlerimiz`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `referanslar`
+--
+ALTER TABLE `referanslar`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `sayfa`
+--
+ALTER TABLE `sayfa`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `sayfalar`
+--
+ALTER TABLE `sayfalar`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `smtp`
+--
+ALTER TABLE `smtp`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `sosyal`
+--
+ALTER TABLE `sosyal`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `urun`
+--
+ALTER TABLE `urun`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `videolar`
+--
+ALTER TABLE `videolar`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `yonetici`
+--
+ALTER TABLE `yonetici`
+  ADD PRIMARY KEY (`adminkodu`);
+
+--
+-- Dökümü yapılmış tablolar için AUTO_INCREMENT değeri
+--
+
+--
+-- Tablo için AUTO_INCREMENT değeri `altsayfa`
+--
+ALTER TABLE `altsayfa`
+  MODIFY `id` int(9) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `ayarlar`
+--
+ALTER TABLE `ayarlar`
+  MODIFY `id` int(9) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `degerler`
+--
+ALTER TABLE `degerler`
+  MODIFY `id` int(9) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `fotokategori`
+--
+ALTER TABLE `fotokategori`
+  MODIFY `id` int(9) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `fotolar`
+--
+ALTER TABLE `fotolar`
+  MODIFY `id` int(9) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=357;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `haber`
+--
+ALTER TABLE `haber`
+  MODIFY `id` int(9) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `hizmetlerimiz`
+--
+ALTER TABLE `hizmetlerimiz`
+  MODIFY `id` int(9) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `referanslar`
+--
+ALTER TABLE `referanslar`
+  MODIFY `id` int(9) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `sayfa`
+--
+ALTER TABLE `sayfa`
+  MODIFY `id` int(9) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `sayfalar`
+--
+ALTER TABLE `sayfalar`
+  MODIFY `id` int(9) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `smtp`
+--
+ALTER TABLE `smtp`
+  MODIFY `id` int(9) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `sosyal`
+--
+ALTER TABLE `sosyal`
+  MODIFY `id` int(9) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `urun`
+--
+ALTER TABLE `urun`
+  MODIFY `id` int(9) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `videolar`
+--
+ALTER TABLE `videolar`
+  MODIFY `id` int(9) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `yonetici`
+--
+ALTER TABLE `yonetici`
+  MODIFY `adminkodu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

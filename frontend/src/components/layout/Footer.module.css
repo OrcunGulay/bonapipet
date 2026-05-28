@@ -1,0 +1,28 @@
+.footer { background: #0f172a; color: #94a3b8; font-family: 'Inter', sans-serif; }
+.widgetsSection { padding: 64px 0; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; }
+
+.widget {}
+.widgetTitle { font-family: 'Outfit', sans-serif; color: #f1f5f9; font-size: 18px; font-weight: 700; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #0077b6; display: inline-block; }
+.widgetText { font-size: 14px; line-height: 1.7; color: #64748b; }
+
+.socialLinks { display: flex; gap: 10px; margin-top: 16px; }
+.socialBtn { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: #1e293b; color: #94a3b8; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: bold; transition: all 0.2s; }
+.socialBtn:hover { background: #0077b6; color: white; transform: translateY(-2px); }
+
+.infoList { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 16px; }
+.infoList li { display: flex; gap: 12px; align-items: flex-start; }
+.infoIcon { font-size: 18px; margin-top: 2px; flex-shrink: 0; }
+.infoList strong { display: block; color: #f1f5f9; font-size: 13px; margin-bottom: 2px; }
+.infoList p { font-size: 13px; color: #64748b; margin: 0; }
+
+.galleryGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.galleryItem { display: block; aspect-ratio: 1; border-radius: 6px; overflow: hidden; }
+.galleryItem img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+.galleryItem:hover img { transform: scale(1.1); }
+
+.footerBottom { background: #000; padding: 20px 0; text-align: center; font-size: 13px; color: #374151; }
+
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .galleryGrid { grid-template-columns: repeat(4, 1fr); } }

@@ -1,0 +1,73 @@
+.sidebar {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.widget {
+  padding: 30px;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f1f5f9;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--primary);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  border-bottom: 1px solid #f8fafc;
+}
+
+.list li:last-child {
+  border-bottom: none;
+}
+
+.list a {
+  display: block;
+  padding: 12px 0;
+  color: var(--text-light);
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s;
+  padding-left: 15px;
+}
+
+.list a::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  color: var(--primary);
+  transition: all 0.3s;
+  transform: translateX(-10px);
+}
+
+.list a:hover, .active a {
+  color: var(--primary);
+  padding-left: 20px;
+}
+
+.list a:hover::before, .active a::before {
+  opacity: 1;
+  transform: translateX(0);
+}
