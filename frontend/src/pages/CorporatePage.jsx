@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useLang } from '../context/LangContext.jsx'
 import apiClient from '../api/apiClient.js'
+import { uploadUrl } from '../api/config.js'
 import PageTitle from '../components/shared/PageTitle.jsx'
 import SidebarMenu from '../components/shared/SidebarMenu.jsx'
 
@@ -35,7 +36,7 @@ export default function CorporatePage() {
         <div style={{ flex: '1 1 600px' }}>
           {pageData.resim && (
             <img 
-              src={`/uploads/${pageData.resim}`} 
+              src={uploadUrl(pageData.resim)} 
               alt={pageData.no} 
               style={{ width: '100%', borderRadius: '12px', marginBottom: '30px' }} 
             />

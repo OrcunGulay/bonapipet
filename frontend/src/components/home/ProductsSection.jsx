@@ -2,6 +2,7 @@ import { useEffect, useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { useLang } from '../../context/LangContext.jsx'
 import apiClient from '../../api/apiClient.js'
+import { uploadUrl } from '../../api/config.js'
 import styles from './ProductsSection.module.css'
 
 export default function ProductsSection() {
@@ -35,7 +36,7 @@ export default function ProductsSection() {
           {categories.filter(c => c.dil === lang || c.dil === 'tr').map(category => {
             // İlgili kategoriye ait ilk ürünü bulup resmini kapak olarak kullanalım
             const catProduct = products.find(p => p.kategori === category.seo)
-            const imageUrl = catProduct?.resim ? `/uploads/${catProduct.resim}` : '/images/resimyok.png'
+            const imageUrl = catProduct?.resim ? uploadUrl(catProduct.resim) : '/images/resimyok.png'
 
             return (
               <div key={category.id} className={styles.productCard}>

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useLang } from '../context/LangContext.jsx'
 import apiClient from '../api/apiClient.js'
+import { uploadUrl } from '../api/config.js'
 import PageTitle from '../components/shared/PageTitle.jsx'
 import SidebarMenu from '../components/shared/SidebarMenu.jsx'
 
@@ -40,7 +41,7 @@ export default function NewsDetailPage() {
         <div style={{ flex: '1 1 600px' }}>
           {news.resim && news.resim !== 'resimyok.png' && (
             <img 
-              src={`/uploads/${news.resim}`} 
+              src={uploadUrl(news.resim)} 
               alt={news.no} 
               style={{ width: '100%', borderRadius: '12px', marginBottom: '30px' }} 
             />

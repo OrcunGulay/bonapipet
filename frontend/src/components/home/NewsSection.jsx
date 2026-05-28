@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useLang } from '../../context/LangContext.jsx'
 import apiClient from '../../api/apiClient.js'
+import { uploadUrl } from '../../api/config.js'
 import styles from './NewsSection.module.css'
 
 export default function NewsSection() {
@@ -39,7 +40,7 @@ export default function NewsSection() {
               <div key={item.id} className={styles.newsCard}>
                 <div className={styles.imageBox}>
                   <Link to={`/haber/${item.seo}`}>
-                    <img src={`/uploads/${item.resim}`} alt={item.no} />
+                    <img src={uploadUrl(item.resim)} alt={item.no} />
                   </Link>
                 </div>
                 <div className={styles.content}>

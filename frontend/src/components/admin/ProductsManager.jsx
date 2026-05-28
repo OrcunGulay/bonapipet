@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import apiClient from '../../api/apiClient'
+import { uploadUrl } from '../../api/config.js'
 import styles from './Manager.module.css'
 
 export default function ProductsManager() {
@@ -128,7 +129,7 @@ export default function ProductsManager() {
               <tr key={item.id}>
                 <td>
                   {item.resim && (
-                    <img src={`/uploads/${item.resim}`} alt="Kategori" className={styles.thumbnail} />
+                    <img src={uploadUrl(item.resim)} alt="Kategori" className={styles.thumbnail} />
                   )}
                 </td>
                 <td>{item.kategori}</td>

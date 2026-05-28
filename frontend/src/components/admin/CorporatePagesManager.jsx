@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import apiClient from '../../api/apiClient'
+import { uploadUrl } from '../../api/config.js'
 import styles from './Manager.module.css'
 
 export default function CorporatePagesManager() {
@@ -171,7 +172,7 @@ export default function CorporatePagesManager() {
               <tr key={page.id}>
                 <td>
                   {page.resim && (
-                    <img src={`/uploads/${page.resim}`} alt={page.no} className={styles.thumbnail} />
+                    <img src={uploadUrl(page.resim)} alt={page.no} className={styles.thumbnail} />
                   )}
                 </td>
                 <td>{page.no}</td>

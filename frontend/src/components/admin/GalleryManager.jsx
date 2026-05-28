@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import apiClient from '../../api/apiClient'
+import { uploadUrl } from '../../api/config.js'
 import styles from './Manager.module.css'
 
 export default function GalleryManager() {
@@ -139,7 +140,7 @@ export default function GalleryManager() {
               <tr key={item.id}>
                 <td>
                   {item.resim && (
-                    <img src={`/uploads/${item.resim}`} alt={item.adi} className={styles.thumbnail} />
+                    <img src={uploadUrl(item.resim)} alt={item.adi} className={styles.thumbnail} />
                   )}
                 </td>
                 <td>{item.adi || '-'}</td>

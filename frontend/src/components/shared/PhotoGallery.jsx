@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Lightbox from 'yet-another-react-lightbox'
 import 'yet-another-react-lightbox/styles.css'
 import styles from './PhotoGallery.module.css'
+import { uploadUrl } from '../../api/config.js'
 
 export default function PhotoGallery({ photos }) {
   const [index, setIndex] = useState(-1)
@@ -9,7 +10,7 @@ export default function PhotoGallery({ photos }) {
   if (!photos || !photos.length) return null
 
   const slides = photos.map(p => ({
-    src: `/uploads/${p.buyuk}`,
+    src: uploadUrl(p.buyuk),
     alt: 'Galeri',
   }))
 
@@ -19,7 +20,7 @@ export default function PhotoGallery({ photos }) {
         {photos.map((p, idx) => (
           <div key={p.id} className={styles.item} onClick={() => setIndex(idx)}>
             <div className={styles.imageBox}>
-              <img src={`/uploads/${p.kucuk}`} alt="Galeri" loading="lazy" />
+              <img src={uploadUrl(p.kucuk)} alt="Galeri" loading="lazy" />
               <div className={styles.overlay}>
                 <span className={styles.icon}>+</span>
               </div>

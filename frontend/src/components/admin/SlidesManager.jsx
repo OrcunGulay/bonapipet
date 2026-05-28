@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import apiClient from '../../api/apiClient'
+import { uploadUrl } from '../../api/config.js'
 import styles from './Manager.module.css'
 
 export default function SlidesManager() {
@@ -166,7 +167,7 @@ export default function SlidesManager() {
               <tr key={slide.id}>
                 <td>
                   {slide.resimbuyuk && (
-                    <img src={`/uploads/${slide.resimbuyuk}`} alt={slide.urunadi} className={styles.thumbnail} />
+                    <img src={uploadUrl(slide.resimbuyuk)} alt={slide.urunadi} className={styles.thumbnail} />
                   )}
                 </td>
                 <td>{slide.urunadi}</td>

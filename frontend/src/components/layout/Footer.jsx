@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useLang } from '../../context/LangContext.jsx'
 import apiClient from '../../api/apiClient.js'
+import { uploadUrl } from '../../api/config.js'
 import styles from './Footer.module.css'
 
 export default function Footer() {
@@ -73,7 +74,7 @@ export default function Footer() {
               <div className={styles.galleryGrid}>
                 {gallery.map(img => (
                   <Link key={img.id} to="/galeri" className={styles.galleryItem}>
-                    <img src={`/uploads/${img.kucuk}`} alt="galeri" />
+                    <img src={uploadUrl(img.kucuk)} alt="galeri" />
                   </Link>
                 ))}
               </div>

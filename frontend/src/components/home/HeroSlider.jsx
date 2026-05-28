@@ -8,6 +8,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { useLang } from '../../context/LangContext.jsx'
 import apiClient from '../../api/apiClient.js'
+import { uploadUrl } from '../../api/config.js'
 import styles from './HeroSlider.module.css'
 
 export default function HeroSlider() {
@@ -45,7 +46,7 @@ export default function HeroSlider() {
             <div className={styles.slideInner}>
               <div
                 className={styles.bgImage}
-                style={{ backgroundImage: `url(/uploads/${slide.resimbuyuk})` }}
+                style={{ backgroundImage: `url(${uploadUrl(slide.resimbuyuk)})` }}
               ></div>
               <div className={styles.overlay}></div>
               <div className={styles.content}>

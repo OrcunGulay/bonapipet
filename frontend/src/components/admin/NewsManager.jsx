@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import apiClient from '../../api/apiClient'
+import { uploadUrl } from '../../api/config.js'
 import styles from './Manager.module.css'
 
 export default function NewsManager() {
@@ -171,7 +172,7 @@ export default function NewsManager() {
               <tr key={item.id}>
                 <td>
                   {item.resim && (
-                    <img src={`/uploads/${item.resim}`} alt={item.no} className={styles.thumbnail} />
+                    <img src={uploadUrl(item.resim)} alt={item.no} className={styles.thumbnail} />
                   )}
                 </td>
                 <td>{item.no}</td>
