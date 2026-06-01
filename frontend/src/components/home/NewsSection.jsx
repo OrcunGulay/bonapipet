@@ -40,7 +40,7 @@ export default function NewsSection() {
               <div key={item.id} className={styles.newsCard}>
                 <div className={styles.imageBox}>
                   <Link to={`/haber/${item.seo}`}>
-                    <img src={uploadUrl(item.resim)} alt={item.no} />
+                    <img src={uploadUrl(item.resim)} alt={item.no} loading="lazy" />
                   </Link>
                 </div>
                 <div className={styles.content}>

@@ -57,15 +57,24 @@ const getAllProductsAdmin = async (req, res) => {
   }
 };
 
+const { processImage } = require('../utils/imageProcessor');
+
 /** POST /api/admin/products — Yeni ürün ekle (Fotoğraf olarak) */
 const createProduct = async (req, res) => {
   try {
     const { kategori } = req.body;
-    const resim = req.file ? req.file.filename : 'resimyok.png';
+    let buyuk = 'resimyok.png';
+    let kucuk = 'resimyok.png';
+
+    if (req.file) {
+      const processed = await processImage(req.file.buffer, req.file.originalname);
+      buyuk = processed.buyuk;
+      kucuk = processed.kucuk;
+    }
 
     await db.execute(
       'INSERT INTO fotolar (kategori, buyuk, kucuk) VALUES ($1, $2, $3)',
-      [kategori, resim, resim]
+      [kategori, buyuk, kucuk]
     );
 
     res.status(201).json({ success: true, message: 'Kategoriye fotoğraf eklendi.' });
@@ -83,8 +92,8 @@ const updateProduct = async (req, res) => {
     
     // Fotoğraf güncelleme varsa
     if (req.file) {
-      const resim = req.file.filename;
-      await db.execute('UPDATE fotolar SET kategori=$1, buyuk=$2, kucuk=$3 WHERE id=$4', [kategori, resim, resim, id]);
+      const processed = await processImage(req.file.buffer, req.file.originalname);
+      await db.execute('UPDATE fotolar SET kategori=$1, buyuk=$2, kucuk=$3 WHERE id=$4', [kategori, processed.buyuk, processed.kucuk, id]);
     } else {
       await db.execute('UPDATE fotolar SET kategori=$1 WHERE id=$2', [kategori, id]);
     }

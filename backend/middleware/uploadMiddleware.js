@@ -1,24 +1,5 @@
 const multer = require('multer');
 const path = require('path');
-const fs = require('fs');
-
-// Upload dizinini oluştur
-const uploadDir = path.join(__dirname, '..', 'uploads');
-if (!fs.existsSync(uploadDir)) {
-  fs.mkdirSync(uploadDir, { recursive: true });
-}
-
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, uploadDir);
-  },
-  filename: (req, file, cb) => {
-    // Rastgele dosya adı - admin/resim.php'deki rand() kullanımının güvenli karşılığı
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
-    const ext = path.extname(file.originalname).toLowerCase();
-    cb(null, `img-${uniqueSuffix}${ext}`);
-  },
-});
 
 // Sadece güvenli resim formatlarına izin ver
 const fileFilter = (req, file, cb) => {
@@ -33,9 +14,10 @@ const fileFilter = (req, file, cb) => {
 };
 
 const upload = multer({
-  storage,
+  storage: multer.memoryStorage(), // Bellekte tut, controller'da optimize edip kaydedeceğiz
   fileFilter,
-  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB max
+  limits: { fileSize: 15 * 1024 * 1024 }, // Max 15MB'a çıkardım çünkü orijinal resimler büyük olabiliyor
 });
 
 module.exports = upload;
+

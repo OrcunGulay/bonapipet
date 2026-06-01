@@ -45,14 +45,18 @@ const getAllGalleryAdmin = async (req, res) => {
   }
 };
 
+const { processImage } = require('../utils/imageProcessor');
+
 /** POST /api/admin/gallery — Fotoğraf yükle */
 const uploadPhoto = async (req, res) => {
   try {
     if (!req.file) return res.status(400).json({ success: false, message: 'Dosya seçilmedi.' });
 
     const { kategori = 'galeri' } = req.body;
-    const buyuk = req.file.filename;
-    const kucuk = req.file.filename; // Küçük boyut oluşturmak için sharp kullanılabilir
+    
+    const processed = await processImage(req.file.buffer, req.file.originalname);
+    const buyuk = processed.buyuk;
+    const kucuk = processed.kucuk;
 
     await db.execute(
       'INSERT INTO fotolar (kategori, buyuk, kucuk) VALUES ($1, $2, $3)',

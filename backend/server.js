@@ -32,7 +32,10 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // ── Static Dosya Servisi (CORS'u Buraya da Uygula) ──────────────────────────
 // Resimlerin olduğu klasörü CORS ile sarmalıyoruz
-app.use('/uploads', cors(corsOptions), express.static(path.join(__dirname, 'uploads')));
+app.use('/uploads', cors(corsOptions), express.static(path.join(__dirname, 'uploads'), {
+  maxAge: '30d', // 30 gün cache
+  immutable: true, // Dosya içeriği değişmeyeceği için immutable
+}));
 
 // ── API Rotaları ─────────────────────────────────────────────────────────────
 app.use('/api/auth', authRoutes);

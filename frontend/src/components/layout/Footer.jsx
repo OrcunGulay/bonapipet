@@ -74,7 +74,7 @@ export default function Footer() {
               <div className={styles.galleryGrid}>
                 {gallery.map(img => (
                   <Link key={img.id} to="/galeri" className={styles.galleryItem}>
-                    <img src={uploadUrl(img.kucuk)} alt="galeri" />
+                    <img src={uploadUrl(img.kucuk)} alt="galeri" loading="lazy" />
                   </Link>
                 ))}
               </div>

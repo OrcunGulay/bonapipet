@@ -29,11 +29,19 @@ const getAllSlidesAdmin = async (req, res) => {
   }
 };
 
+const { processImage } = require('../utils/imageProcessor');
+
 /** POST /api/admin/slides — Slayt ekle */
 const createSlide = async (req, res) => {
   try {
     const { urunadi, kod, sira, dil } = req.body;
-    const resimbuyuk = req.file ? req.file.filename : 'resimyok.png';
+    let resimbuyuk = 'resimyok.png';
+    
+    if (req.file) {
+      const processed = await processImage(req.file.buffer, req.file.originalname);
+      resimbuyuk = processed.buyuk; // Slaytlar için şimdilik sadece buyuk alanı var
+    }
+    
     const seo = slugify(urunadi);
 
     await db.execute(
@@ -52,7 +60,13 @@ const updateSlide = async (req, res) => {
   try {
     const { id } = req.params;
     const { urunadi, kod, sira, dil, mevcut_resim } = req.body;
-    const resimbuyuk = req.file ? req.file.filename : mevcut_resim;
+    let resimbuyuk = mevcut_resim;
+    
+    if (req.file) {
+      const processed = await processImage(req.file.buffer, req.file.originalname);
+      resimbuyuk = processed.buyuk;
+    }
+    
     const seo = slugify(urunadi);
 
     await db.execute(

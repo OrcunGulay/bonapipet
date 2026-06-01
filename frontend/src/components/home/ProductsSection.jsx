@@ -41,7 +41,7 @@ export default function ProductsSection() {
             return (
               <div key={category.id} className={styles.productCard}>
                 <div className={styles.imageBox}>
-                  <img src={imageUrl} alt={category.no} />
+                  <img src={imageUrl} alt={category.no} loading="lazy" />
                   <div className={styles.overlay}>
                     <Link to={`/urun/${category.seo}`} className={styles.viewBtn}>
                       {t.incele || 'İncele'}

@@ -64,11 +64,19 @@ function slugify(text) {
   return text.split('').map(c=>map[c]||c).join('').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 }
 
+const { processImage } = require('../utils/imageProcessor');
+
 /** POST /api/admin/pages — Sayfa ekle */
 const createPage = async (req, res) => {
   try {
     const { no, aciklama, meta, keyword, dil } = req.body;
-    const resim = req.file ? req.file.filename : '';
+    let resim = '';
+    
+    if (req.file) {
+      const processed = await processImage(req.file.buffer, req.file.originalname);
+      resim = processed.buyuk; // Sayfa tablosunda sadece 'resim' alanı var
+    }
+    
     const seo = slugify(no);
 
     const groupId = uuidv4();
@@ -103,7 +111,13 @@ const updatePage = async (req, res) => {
   try {
     const { id } = req.params;
     const { no, aciklama, meta, keyword, dil, mevcut_resim } = req.body;
-    const resim = req.file ? req.file.filename : mevcut_resim;
+    let resim = mevcut_resim;
+    
+    if (req.file) {
+      const processed = await processImage(req.file.buffer, req.file.originalname);
+      resim = processed.buyuk;
+    }
+    
     const seo = slugify(no);
 
     const [rows] = await db.execute('SELECT group_id FROM sayfa WHERE id=$1', [id]);

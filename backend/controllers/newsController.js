@@ -56,11 +56,19 @@ function slugify(text) {
   return text.split('').map(c=>map[c]||c).join('').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 }
 
+const { processImage } = require('../utils/imageProcessor');
+
 /** POST /api/admin/news — Haber ekle */
 const createNews = async (req, res) => {
   try {
     const { no, aciklama, meta, keyword, dil } = req.body;
-    const resim = req.file ? req.file.filename : 'resimyok.png';
+    let resim = 'resimyok.png';
+    
+    if (req.file) {
+      const processed = await processImage(req.file.buffer, req.file.originalname);
+      resim = processed.buyuk; // Haber tablosunda sadece 'resim' alanı var
+    }
+    
     const seo = slugify(no);
     const tarih = new Date().toLocaleDateString('tr-TR');
 
@@ -97,7 +105,13 @@ const updateNews = async (req, res) => {
   try {
     const { id } = req.params;
     const { no, aciklama, meta, keyword, dil, mevcut_resim } = req.body;
-    const resim = req.file ? req.file.filename : mevcut_resim;
+    let resim = mevcut_resim;
+    
+    if (req.file) {
+      const processed = await processImage(req.file.buffer, req.file.originalname);
+      resim = processed.buyuk;
+    }
+    
     const seo = slugify(no);
     const tarih = new Date().toLocaleDateString('tr-TR');
 
