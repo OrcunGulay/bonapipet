@@ -16,6 +16,7 @@ export default function Header() {
   const [corporatePages, setCorporatePages] = useState([])
   const [categories, setCategories] = useState([])
   const [settings, setSettings] = useState({})
+  const [openDropdown, setOpenDropdown] = useState(null)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60)
@@ -85,10 +86,15 @@ export default function Header() {
 
             {/* Kurumsal dropdown */}
             <div className={styles.dropdown}>
-              <span className={styles.navLink}>{t.kurumsal || 'Kurumsal'} <span className={styles.arrow}>▾</span></span>
-              <div className={styles.dropdownMenu}>
+              <span 
+                className={styles.navLink} 
+                onClick={() => setOpenDropdown(openDropdown === 'kurumsal' ? null : 'kurumsal')}
+              >
+                {t.kurumsal || 'Kurumsal'} <span className={styles.arrow}>{openDropdown === 'kurumsal' ? '▴' : '▾'}</span>
+              </span>
+              <div className={`${styles.dropdownMenu} ${openDropdown === 'kurumsal' ? styles.showMobile : ''}`}>
                 {corporatePages.map(p => (
-                  <Link key={p.id} to={`/kurumsal/${p.seo}`} className={styles.dropdownItem} onClick={() => setMenuOpen(false)}>
+                  <Link key={p.id} to={`/kurumsal/${p.seo}`} className={styles.dropdownItem} onClick={() => { setMenuOpen(false); setOpenDropdown(null); }}>
                     {p.no}
                   </Link>
                 ))}
@@ -97,10 +103,15 @@ export default function Header() {
 
             {/* Ürünler dropdown */}
             <div className={styles.dropdown}>
-              <span className={styles.navLink}>{t.urunlerimiz || 'Ürünlerimiz'} <span className={styles.arrow}>▾</span></span>
-              <div className={styles.dropdownMenu}>
+              <span 
+                className={styles.navLink} 
+                onClick={() => setOpenDropdown(openDropdown === 'urunler' ? null : 'urunler')}
+              >
+                {t.urunlerimiz || 'Ürünlerimiz'} <span className={styles.arrow}>{openDropdown === 'urunler' ? '▴' : '▾'}</span>
+              </span>
+              <div className={`${styles.dropdownMenu} ${openDropdown === 'urunler' ? styles.showMobile : ''}`}>
                 {categories.map(c => (
-                  <Link key={c.id} to={`/kategori/${c.seo}`} className={styles.dropdownItem} onClick={() => setMenuOpen(false)}>
+                  <Link key={c.id} to={`/kategori/${c.seo}`} className={styles.dropdownItem} onClick={() => { setMenuOpen(false); setOpenDropdown(null); }}>
                     {c.no}
                   </Link>
                 ))}

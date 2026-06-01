@@ -85,7 +85,7 @@
 .dropdownItem:hover { background: #eff6ff; color: #0077b6; }
 
 /* Hamburger */
-.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; position: relative; z-index: 1000; }
 .hamburger span { display: block; width: 24px; height: 2px; background: #374151; border-radius: 2px; transition: all 0.3s; }
 
 @media (max-width: 768px) {
@@ -97,7 +97,9 @@
     background: rgba(255,255,255,0.98);
     backdrop-filter: blur(10px);
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 100px 0 60px;
+    overflow-y: auto;
     gap: 8px;
     opacity: 0;
     pointer-events: none;
@@ -106,7 +108,19 @@
     z-index: 999;
   }
   .navOpen { opacity: 1; pointer-events: all; transform: scale(1); }
-  .navLink { font-size: 18px; padding: 14px 24px; width: 100%; text-align: center; }
-  .dropdownMenu { position: static; box-shadow: none; opacity: 1; visibility: visible; transform: none; background: #f8fafc; margin-top: 4px; }
+  .navLink { font-size: 18px; padding: 14px 24px; width: 100%; text-align: center; justify-content: center; }
+  .dropdownMenu { 
+    position: static; 
+    box-shadow: none; 
+    opacity: 1; 
+    visibility: visible; 
+    transform: none; 
+    background: #f8fafc; 
+    margin-top: 4px; 
+    display: none; 
+  }
+  .dropdownMenu.showMobile {
+    display: block;
+  }
   .contactBtn { margin-left: 0; }
 }
