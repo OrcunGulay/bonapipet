@@ -11,6 +11,8 @@ const adminRoutes = require('./routes/adminRoutes');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+app.set('trust proxy', 1);
+
 // ── Güvenlik Middleware (Helmet'i Cross-Origin ile yapılandır) ──────────────
 // crossOriginResourcePolicy: false yaparak resimlerin dışarıdan yüklenmesini engellemiyoruz
 app.use(helmet({
