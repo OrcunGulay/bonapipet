@@ -106,8 +106,8 @@ export default function GalleryManager() {
             </select>
           </div>
           <div className={styles.formGroup}>
-            <label>Görsel Seç</label>
-            <input id="galleryImageInput" type="file" accept="image/*" onChange={handleFileChange} required />
+            <label>Görsel / Video Seç</label>
+            <input id="galleryImageInput" type="file" accept="image/*,video/mp4,video/webm,video/ogg" onChange={handleFileChange} required />
           </div>
           <div>
             <button type="submit" className={styles.saveBtn}>Yükle</button>
@@ -139,9 +139,11 @@ export default function GalleryManager() {
             {filteredPhotos.map(item => (
               <tr key={item.id}>
                 <td>
-                  {item.resim && (
+                  {item.resim && item.resim.match(/\.(mp4|webm|ogg)$/i) ? (
+                    <video src={uploadUrl(item.resim)} className={styles.thumbnail} muted />
+                  ) : item.resim ? (
                     <img src={uploadUrl(item.resim)} alt={item.adi} className={styles.thumbnail} />
-                  )}
+                  ) : null}
                 </td>
                 <td>{item.adi || '-'}</td>
                 <td>{item.kategori}</td>

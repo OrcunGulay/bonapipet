@@ -40,7 +40,11 @@ export default function NewsSection() {
               <div key={item.id} className={styles.newsCard}>
                 <div className={styles.imageBox}>
                   <Link to={`/haber/${item.seo}`}>
-                    <img src={uploadUrl(item.resim)} alt={item.no} loading="lazy" />
+                    {item.resim && item.resim.match(/\.(mp4|webm|ogg)$/i) ? (
+                      <video src={uploadUrl(item.resim)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} autoPlay loop muted playsInline />
+                    ) : (
+                      <img src={uploadUrl(item.resim)} alt={item.no} loading="lazy" />
+                    )}
                   </Link>
                 </div>
                 <div className={styles.content}>

@@ -74,7 +74,11 @@ export default function Footer() {
               <div className={styles.galleryGrid}>
                 {gallery.map(img => (
                   <Link key={img.id} to="/galeri" className={styles.galleryItem}>
-                    <img src={uploadUrl(img.kucuk)} alt="galeri" loading="lazy" />
+                    {img.kucuk && img.kucuk.match(/\.(mp4|webm|ogg)$/i) ? (
+                      <video src={uploadUrl(img.kucuk)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} muted />
+                    ) : (
+                      <img src={uploadUrl(img.kucuk)} alt="galeri" loading="lazy" />
+                    )}
                   </Link>
                 ))}
               </div>

@@ -141,8 +141,8 @@ export default function CorporatePagesManager() {
             <input type="text" name="keyword" value={formData.keyword} onChange={handleInputChange} />
           </div>
           <div className={styles.formGroup}>
-            <label>Sayfa Görseli {editingId && '(Değiştirmek istemiyorsanız boş bırakın)'}</label>
-            <input id="pageImageInput" type="file" accept="image/*" onChange={handleFileChange} />
+            <label>Sayfa Görseli / Videosu {editingId && '(Değiştirmek istemiyorsanız boş bırakın)'}</label>
+            <input id="pageImageInput" type="file" accept="image/*,video/mp4,video/webm,video/ogg" onChange={handleFileChange} />
           </div>
           <div>
             <button type="submit" className={styles.saveBtn}>
@@ -171,9 +171,11 @@ export default function CorporatePagesManager() {
             {pages.map(page => (
               <tr key={page.id}>
                 <td>
-                  {page.resim && (
+                  {page.resim && page.resim.match(/\.(mp4|webm|ogg)$/i) ? (
+                    <video src={uploadUrl(page.resim)} className={styles.thumbnail} muted />
+                  ) : page.resim ? (
                     <img src={uploadUrl(page.resim)} alt={page.no} className={styles.thumbnail} />
-                  )}
+                  ) : null}
                 </td>
                 <td>{page.no}</td>
                 <td><span className={styles.langBadge}>{page.dil ? page.dil.toUpperCase() : 'TR'}</span></td>

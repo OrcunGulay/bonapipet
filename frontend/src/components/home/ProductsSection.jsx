@@ -41,7 +41,11 @@ export default function ProductsSection() {
             return (
               <div key={category.id} className={styles.productCard}>
                 <div className={styles.imageBox}>
-                  <img src={imageUrl} alt={category.no} loading="lazy" />
+                  {catProduct?.resim && catProduct.resim.match(/\.(mp4|webm|ogg)$/i) ? (
+                    <video src={imageUrl} style={{ width: '100%', height: '100%', objectFit: 'cover' }} autoPlay loop muted playsInline />
+                  ) : (
+                    <img src={imageUrl} alt={category.no} loading="lazy" />
+                  )}
                   <div className={styles.overlay}>
                     <Link to={`/urun/${category.seo}`} className={styles.viewBtn}>
                       {t.incele || 'İncele'}

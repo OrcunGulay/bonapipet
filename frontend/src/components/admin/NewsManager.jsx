@@ -141,8 +141,8 @@ export default function NewsManager() {
             <input type="text" name="keyword" value={formData.keyword} onChange={handleInputChange} />
           </div>
           <div className={styles.formGroup}>
-            <label>Haber Görseli {editingId && '(Değiştirmek istemiyorsanız boş bırakın)'}</label>
-            <input id="newsImageInput" type="file" accept="image/*" onChange={handleFileChange} />
+            <label>Haber Görseli / Videosu {editingId && '(Değiştirmek istemiyorsanız boş bırakın)'}</label>
+            <input id="newsImageInput" type="file" accept="image/*,video/mp4,video/webm,video/ogg" onChange={handleFileChange} />
           </div>
           <div>
             <button type="submit" className={styles.saveBtn}>
@@ -171,9 +171,11 @@ export default function NewsManager() {
             {news.map(item => (
               <tr key={item.id}>
                 <td>
-                  {item.resim && (
+                  {item.resim && item.resim.match(/\.(mp4|webm|ogg)$/i) ? (
+                    <video src={uploadUrl(item.resim)} className={styles.thumbnail} muted />
+                  ) : item.resim ? (
                     <img src={uploadUrl(item.resim)} alt={item.no} className={styles.thumbnail} />
-                  )}
+                  ) : null}
                 </td>
                 <td>{item.no}</td>
                 <td><span className={styles.langBadge}>{item.dil ? item.dil.toUpperCase() : 'TR'}</span></td>

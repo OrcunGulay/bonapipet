@@ -136,8 +136,8 @@ export default function SlidesManager() {
             <input type="number" name="sira" value={formData.sira} onChange={handleInputChange} />
           </div>
           <div className={styles.formGroup}>
-            <label>Görsel Seç {editingId && '(Değiştirmek istemiyorsanız boş bırakın)'}</label>
-            <input id="slideImageInput" type="file" accept="image/*" onChange={handleFileChange} required={!editingId} />
+            <label>Görsel / Video Seç {editingId && '(Değiştirmek istemiyorsanız boş bırakın)'}</label>
+            <input id="slideImageInput" type="file" accept="image/*,video/mp4,video/webm,video/ogg" onChange={handleFileChange} required={!editingId} />
           </div>
           <div>
             <button type="submit" className={styles.saveBtn}>
@@ -166,9 +166,11 @@ export default function SlidesManager() {
             {slides.map(slide => (
               <tr key={slide.id}>
                 <td>
-                  {slide.resimbuyuk && (
+                  {slide.resimbuyuk && slide.resimbuyuk.match(/\.(mp4|webm|ogg)$/i) ? (
+                    <video src={uploadUrl(slide.resimbuyuk)} className={styles.thumbnail} muted />
+                  ) : slide.resimbuyuk ? (
                     <img src={uploadUrl(slide.resimbuyuk)} alt={slide.urunadi} className={styles.thumbnail} />
-                  )}
+                  ) : null}
                 </td>
                 <td>{slide.urunadi}</td>
                 <td><span className={styles.langBadge}>{slide.dil ? slide.dil.toUpperCase() : 'TR'}</span></td>

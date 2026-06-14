@@ -34,13 +34,19 @@ export default function CorporatePage() {
       <div className="container" style={{ padding: '60px 24px', display: 'flex', gap: '40px', flexWrap: 'wrap' }}>
         
         <div style={{ flex: '1 1 600px' }}>
-          {pageData.resim && (
+          {pageData.resim && pageData.resim.match(/\.(mp4|webm|ogg)$/i) ? (
+            <video 
+              src={uploadUrl(pageData.resim)} 
+              autoPlay loop muted playsInline
+              style={{ width: '100%', borderRadius: '12px', marginBottom: '30px' }} 
+            />
+          ) : pageData.resim ? (
             <img 
               src={uploadUrl(pageData.resim)} 
               alt={pageData.no} 
               style={{ width: '100%', borderRadius: '12px', marginBottom: '30px' }} 
             />
-          )}
+          ) : null}
           <h2 style={{ marginBottom: '20px', color: 'var(--secondary)' }}>{pageData.no}</h2>
           <div className="ql-editor" dangerouslySetInnerHTML={{ __html: pageData.aciklama }} />
         </div>

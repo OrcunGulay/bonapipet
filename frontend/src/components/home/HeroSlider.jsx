@@ -44,10 +44,21 @@ export default function HeroSlider() {
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div className={styles.slideInner}>
-              <div
-                className={styles.bgImage}
-                style={{ backgroundImage: `url(${uploadUrl(slide.resimbuyuk)})` }}
-              ></div>
+              {slide.resimbuyuk && slide.resimbuyuk.match(/\.(mp4|webm|ogg)$/i) ? (
+                <video
+                  className={styles.bgVideo}
+                  src={uploadUrl(slide.resimbuyuk)}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+              ) : (
+                <div
+                  className={styles.bgImage}
+                  style={{ backgroundImage: `url(${uploadUrl(slide.resimbuyuk)})` }}
+                ></div>
+              )}
               <div className={styles.overlay}></div>
               <div className={styles.content}>
                 <div className="container">

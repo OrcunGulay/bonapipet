@@ -11,12 +11,27 @@ if (!fs.existsSync(UPLOADS_DIR)) {
 
 /**
  * Resim buffer'ını optimize ederek büyük ve küçük versiyonlarını diske yazar.
- * @param {Buffer} buffer – Resim dosyasının buffer'ı
+ * Eğer dosya bir video ise optimize etmeden doğrudan kaydeder.
+ * @param {Buffer} buffer – Resim veya video dosyasının buffer'ı
  * @param {string} originalName – Orijinal dosya adı (uzantı çıkarımı için)
  * @returns {{ buyuk: string, kucuk: string }} – Diske yazılan dosya adları
  */
 async function processImage(buffer, originalName) {
   const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
+  const ext = path.extname(originalName).toLowerCase();
+  
+  const isVideo = ['.mp4', '.webm', '.ogg'].includes(ext);
+
+  if (isVideo) {
+    const videoName = `vid-${uniqueSuffix}${ext}`;
+    const videoPath = path.join(UPLOADS_DIR, videoName);
+    
+    // Videoyu doğrudan diske yaz
+    fs.writeFileSync(videoPath, buffer);
+    
+    return { buyuk: videoName, kucuk: videoName }; // Videolar için küçük versiyon (thumbnail) oluşturmuyoruz şimdilik, aynı ismi dönüyoruz
+  }
+
   const buyukName = `img-${uniqueSuffix}.jpg`;
   const kucukName = `img-${uniqueSuffix}_thumb.jpg`;
 

@@ -40,11 +40,19 @@ export default function NewsDetailPage() {
         
         <div style={{ flex: '1 1 600px' }}>
           {news.resim && news.resim !== 'resimyok.png' && (
-            <img 
-              src={uploadUrl(news.resim)} 
-              alt={news.no} 
-              style={{ width: '100%', borderRadius: '12px', marginBottom: '30px' }} 
-            />
+            news.resim.match(/\.(mp4|webm|ogg)$/i) ? (
+              <video 
+                src={uploadUrl(news.resim)} 
+                autoPlay loop muted playsInline
+                style={{ width: '100%', borderRadius: '12px', marginBottom: '30px' }} 
+              />
+            ) : (
+              <img 
+                src={uploadUrl(news.resim)} 
+                alt={news.no} 
+                style={{ width: '100%', borderRadius: '12px', marginBottom: '30px' }} 
+              />
+            )
           )}
           <h2 style={{ marginBottom: '20px', color: 'var(--secondary)' }}>{news.no}</h2>
           <div style={{ color: 'var(--primary)', marginBottom: '20px', fontWeight: 600 }}>{news.tarih}</div>
